@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRADE AI - Trading Signals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">KVEM PRIVATE AI</div>
+            <div class="header-controls">
+                <!-- Custom Language Selector -->
+                <div class="custom-language-select" id="customLanguageSelect">
+                    <div class="custom-select-trigger" id="languageTrigger">
+                        <img src="svg/gb.svg" alt="GB" class="flag-icon language-flag-full" id="languageFlag">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Language Modal (moved outside header for proper centering) -->
+    <div class="language-modal" id="languageModal">
+        <div class="language-modal-content">
+            <div class="language-modal-header">
+                <h3 class="language-modal-title">Select the language</h3>
+                <button class="language-modal-close" id="languageModalClose">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="language-modal-list" id="languageModalList">
+                <div class="language-modal-option" data-lang="en" data-flag="gb">
+                    <div class="language-flag">
+                        <img src="svg/gb.svg" alt="GB" class="flag-icon">
+                    </div>
+                    <span class="language-name">English</span>
+                </div>
+                <div class="language-modal-option" data-lang="ru" data-flag="ru">
+                    <div class="language-flag">
+                        <img src="svg/ru.svg" alt="RU" class="flag-icon">
+                    </div>
+                    <span class="language-name">Русский</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+
+        <!-- Trading Mode Selector -->
+        <div class="mode-selector">
+            <button class="mode-btn" data-mode="forex">Forex</button>
+            <button class="mode-btn active" data-mode="otc">OTC</button>
+        </div>
+
+        <!-- Currency Pair and Timeframe Selectors -->
+        <div class="selectors-row">
+            <div class="selector-wrapper">
+                <!-- Custom Currency Selector -->
+                <div class="custom-currency-select" id="customCurrencySelect">
+                    <div class="custom-select-trigger" id="currencyTrigger">
+                        <div class="currency-flags">
+                            <img src="svg/eu.svg" alt="EU" class="flag-icon" id="flag1">
+                            <img src="svg/us.svg" alt="US" class="flag-icon" id="flag2">
+                        </div>
+                        <span class="currency-text" id="currencyText">EURUSD</span>
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M6 9L1 4h10z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="custom-select-dropdown" id="currencyDropdown">
+                        <div class="custom-option" data-value="EURUSD" data-flag1="eu" data-flag2="us">
+                            <div class="currency-flags">
+                                <img src="svg/eu.svg" alt="EU" class="flag-icon">
+                                <img src="svg/us.svg" alt="US" class="flag-icon">
+                            </div>
+                            <span class="currency-text">EURUSD</span>
+                        </div>
+                        <div class="custom-option" data-value="GBPUSD" data-flag1="gb" data-flag2="us">
+                            <div class="currency-flags">
+                                <img src="svg/gb.svg" alt="GB" class="flag-icon">
+                                <img src="svg/us.svg" alt="US" class="flag-icon">
+                            </div>
+                            <span class="currency-text">GBPUSD</span>
+                        </div>
+                        <div class="custom-option" data-value="USDJPY" data-flag1="us" data-flag2="jp">
+                            <div class="currency-flags">
+                                <img src="svg/us.svg" alt="US" class="flag-icon">
+                                <img src="svg/jp.svg" alt="JP" class="flag-icon">
+                            </div>
+                            <span class="currency-text">USDJPY</span>
+                        </div>
+                        <div class="custom-option" data-value="AUDUSD" data-flag1="au" data-flag2="us">
+                            <div class="currency-flags">
+                                <img src="svg/au.svg" alt="AU" class="flag-icon">
+                                <img src="svg/us.svg" alt="US" class="flag-icon">
+                            </div>
+                            <span class="currency-text">AUDUSD</span>
+                        </div>
+                        <div class="custom-option" data-value="USDCAD" data-flag1="us" data-flag2="ca">
+                            <div class="currency-flags">
+                                <img src="svg/us.svg" alt="US" class="flag-icon">
+                                <img src="svg/ca.svg" alt="CA" class="flag-icon">
+                            </div>
+                            <span class="currency-text">USDCAD</span>
+                        </div>
+                        <div class="custom-option" data-value="USDCHF" data-flag1="us" data-flag2="ch">
+                            <div class="currency-flags">
+                                <img src="svg/us.svg" alt="US" class="flag-icon">
+                                <img src="svg/ch.svg" alt="CH" class="flag-icon">
+                            </div>
+                            <span class="currency-text">USDCHF</span>
+                        </div>
+                        <div class="custom-option" data-value="EURGBP" data-flag1="eu" data-flag2="gb">
+                            <div class="currency-flags">
+                                <img src="svg/eu.svg" alt="EU" class="flag-icon">
+                                <img src="svg/gb.svg" alt="GB" class="flag-icon">
+                            </div>
+                            <span class="currency-text">EURGBP</span>
+                        </div>
+                        <div class="custom-option" data-value="EURJPY" data-flag1="eu" data-flag2="jp">
+                            <div class="currency-flags">
+                                <img src="svg/eu.svg" alt="EU" class="flag-icon">
+                                <img src="svg/jp.svg" alt="JP" class="flag-icon">
+                            </div>
+                            <span class="currency-text">EURJPY</span>
+                        </div>
+                        <div class="custom-option" data-value="GBPJPY" data-flag1="gb" data-flag2="jp">
+                            <div class="currency-flags">
+                                <img src="svg/gb.svg" alt="GB" class="flag-icon">
+                                <img src="svg/jp.svg" alt="JP" class="flag-icon">
+                            </div>
+                            <span class="currency-text">GBPJPY</span>
+                        </div>
+                        <div class="custom-option" data-value="AUDJPY" data-flag1="au" data-flag2="jp">
+                            <div class="currency-flags">
+                                <img src="svg/au.svg" alt="AU" class="flag-icon">
+                                <img src="svg/jp.svg" alt="JP" class="flag-icon">
+                            </div>
+                            <span class="currency-text">AUDJPY</span>
+                        </div>
+                        <div class="custom-option" data-value="EURAUD" data-flag1="eu" data-flag2="au">
+                            <div class="currency-flags">
+                                <img src="svg/eu.svg" alt="EU" class="flag-icon">
+                                <img src="svg/au.svg" alt="AU" class="flag-icon">
+                            </div>
+                            <span class="currency-text">EURAUD</span>
+                        </div>
+                        <div class="custom-option" data-value="GBPAUD" data-flag1="gb" data-flag2="au">
+                            <div class="currency-flags">
+                                <img src="svg/gb.svg" alt="GB" class="flag-icon">
+                                <img src="svg/au.svg" alt="AU" class="flag-icon">
+                            </div>
+                            <span class="currency-text">GBPAUD</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hidden select for form submission -->
+                <select class="currency-select" id="currencySelect" style="display: none;">
+                    <option value="EURUSD" data-flag1="eu" data-flag2="us">EURUSD</option>
+                    <option value="GBPUSD" data-flag1="gb" data-flag2="us">GBPUSD</option>
+                    <option value="USDJPY" data-flag1="us" data-flag2="jp">USDJPY</option>
+                    <option value="AUDUSD" data-flag1="au" data-flag2="us">AUDUSD</option>
+                    <option value="USDCAD" data-flag1="us" data-flag2="ca">USDCAD</option>
+                    <option value="USDCHF" data-flag1="us" data-flag2="ch">USDCHF</option>
+                    <option value="EURGBP" data-flag1="eu" data-flag2="gb">EURGBP</option>
+                    <option value="EURJPY" data-flag1="eu" data-flag2="jp">EURJPY</option>
+                    <option value="GBPJPY" data-flag1="gb" data-flag2="jp">GBPJPY</option>
+                    <option value="AUDJPY" data-flag1="au" data-flag2="jp">AUDJPY</option>
+                    <option value="EURAUD" data-flag1="eu" data-flag2="au">EURAUD</option>
+                    <option value="GBPAUD" data-flag1="gb" data-flag2="au">GBPAUD</option>
+                </select>
+            </div>
+            <div class="selector-wrapper">
+                <!-- Custom Timeframe Selector -->
+                <div class="custom-timeframe-select" id="customTimeframeSelect">
+                    <div class="custom-select-trigger" id="timeframeTrigger">
+                        <span class="timeframe-text" id="timeframeText">5S</span>
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M6 9L1 4h10z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="custom-select-dropdown" id="timeframeDropdown">
+                        <!-- Options will be populated dynamically -->
+                    </div>
+                </div>
+                <!-- Hidden select for form submission -->
+                <select class="timeframe-select" id="timeframeSelect" style="display: none;">
+                    <!-- Options will be populated dynamically based on mode -->
+                </select>
+            </div>
+        </div>
+
+        <!-- Signal Display Area -->
+        <div class="signal-area" id="signalArea">
+            <div class="signal-placeholder" id="signalPlaceholder">
+                <div class="placeholder-content">
+                    <svg class="camera-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 19C23 19.5304 22.7893 20.0391 22.4142 20.4142C22.0391 20.7893 21.5304 21 21 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8C1 7.46957 1.21071 6.96086 1.58579 6.58579C1.96086 6.21071 2.46957 6 3 6H7L9 4H15L17 6H21C21.5304 6 22.0391 6.21071 22.4142 6.58579C22.7893 6.96086 23 7.46957 23 8V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <p class="placeholder-text">Click to take a photo or select an image</p>
+                </div>
+            </div>
+            <input type="file" id="imageInput" accept="image/*" capture="environment" style="display: none;">
+            <canvas id="imageCanvas" style="display: none;"></canvas>
+            <img id="previewImage" style="display: none;" alt="Preview">
+            
+            <!-- Calculating Indicators (shown during analysis) -->
+            <div class="calculating-indicators" id="calculatingIndicators" style="display: none;">
+                <div class="calculating-content">
+                    <div class="calculating-spinner">
+                        <div class="spinner-ring"></div>
+                        <div class="spinner-ring"></div>
+                        <div class="spinner-ring"></div>
+                    </div>
+                    <h3 class="calculating-title">Calculating indicators</h3>
+                    <p class="calculating-text">Analyzing technical indicators...</p>
+                    <div class="indicators-list">
+                        <div class="indicator-item">
+                            <span class="indicator-name">RSI</span>
+                            <span class="indicator-status calculating">Calculating...</span>
+                        </div>
+                        <div class="indicator-item">
+                            <span class="indicator-name">MACD</span>
+                            <span class="indicator-status calculating">Calculating...</span>
+                        </div>
+                        <div class="indicator-item">
+                            <span class="indicator-name">Bollinger Bands</span>
+                            <span class="indicator-status calculating">Calculating...</span>
+                        </div>
+                        <div class="indicator-item">
+                            <span class="indicator-name">Moving Average</span>
+                            <span class="indicator-status calculating">Calculating...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Signal Info (shown after analysis) -->
+            <div class="signal-info" id="signalInfo" style="display: none;">
+                <div class="signal-header">
+                    <span class="signal-label" data-i18n="sign">SIGNAL</span>
+                </div>
+                
+                <!-- Currency Pair Card -->
+                <div class="signal-card currency-pair-card">
+                    <span class="card-label" data-i18n="currencyPair">Currency Pair</span>
+                    <div class="currency-pair-content">
+                        <div class="currency-pair-flags" id="signalCurrencyFlags">
+                            <img src="svg/eu.svg" alt="EU" class="flag-icon">
+                            <img src="svg/us.svg" alt="US" class="flag-icon">
+                        </div>
+                        <span class="currency-pair-text" id="detailPair">EURUSD OTC</span>
+                    </div>
+                </div>
+                
+                <!-- Timeframe and Accuracy Cards Row -->
+                <div class="signal-cards-row">
+                    <div class="signal-card">
+                        <span class="card-label" data-i18n="timeframe">Timeframe</span>
+                        <span class="card-value" id="detailTimeframe">5s</span>
+                    </div>
+                    <div class="signal-card">
+                        <span class="card-label" data-i18n="accuracy">Accuracy</span>
+                        <span class="card-value accuracy-value" id="detailAccuracy">71%</span>
+                    </div>
+                </div>
+                
+                <!-- Direction Card -->
+                <div class="signal-card direction-card">
+                    <span class="card-label" data-i18n="direction">Direction</span>
+                    <div class="direction-content">
+                        <div class="direction-icon" id="directionIcon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="direction-text" id="detailDirection">SELL</span>
+                    </div>
+                </div>
+                
+                <!-- Progress Section -->
+                <div class="progress-section">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span data-i18n="signalFound">Signal found</span>
+                        <span id="progressPercent">100%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Get Signal Button -->
+        <button class="get-signal-btn" id="getSignalBtn">
+            GET SIGNAL
+        </button>
+        
+        <!-- New Photo Button -->
+        <button class="new-photo-btn" id="newPhotoBtn" style="display: none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23 19C23 19.5304 22.7893 20.0391 22.4142 20.4142C22.0391 20.7893 21.5304 21 21 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8C1 7.46957 1.21071 6.96086 1.58579 6.58579C1.96086 6.21071 2.46957 6 3 6H7L9 4H15L17 6H21C21.5304 6 22.0391 6.21071 22.4142 6.58579C22.7893 6.96086 23 7.46957 23 8V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            Load more photos
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
