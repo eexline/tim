@@ -48,13 +48,12 @@ function initTelegramWebApp() {
         // Дополнительные настройки для лучшего отображения
         tg.enableClosingConfirmation();
         
-        // Устанавливаем отступ для safe area (iPhone notch/Dynamic Island)
+        // Устанавливаем отступ для safe area (iPhone notch/Dynamic Island) + дополнительно 20px
         const header = document.querySelector('.header');
         if (header && tg.safeAreaInsets) {
             const topInset = tg.safeAreaInsets.top || 0;
-            if (topInset > 0) {
-                header.style.paddingTop = `${topInset}px`;
-            }
+            const additionalPadding = 20;
+            header.style.paddingTop = `${topInset + additionalPadding}px`;
         }
     }
 }
