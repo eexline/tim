@@ -99,6 +99,8 @@ body {
     position: relative;
     left: 0;
     right: 0;
+    /* Safe area support for iPhone notch/Dynamic Island */
+    padding-top: env(safe-area-inset-top, 0px);
 }
 
 .header-content {
