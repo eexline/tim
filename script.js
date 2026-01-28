@@ -1,1 +1,1074 @@
-const _0x22b7a4=_0x1d6e;(function(_0x43917c,_0x1e3e20){const _0x2ff611=_0x1d6e,_0x3de5a6=_0x43917c();while(!![]){try{const _0x228291=parseInt(_0x2ff611(0x15a))/0x1*(-parseInt(_0x2ff611(0x185))/0x2)+-parseInt(_0x2ff611(0x180))/0x3+parseInt(_0x2ff611(0x1d7))/0x4*(-parseInt(_0x2ff611(0x199))/0x5)+parseInt(_0x2ff611(0x1c1))/0x6+-parseInt(_0x2ff611(0x184))/0x7+-parseInt(_0x2ff611(0x149))/0x8+parseInt(_0x2ff611(0x172))/0x9;if(_0x228291===_0x1e3e20)break;else _0x3de5a6['push'](_0x3de5a6['shift']());}catch(_0xe07da8){_0x3de5a6['push'](_0x3de5a6['shift']());}}}(_0x59c8,0x4a8ab));const modeButtons=document[_0x22b7a4(0x11a)]('.mode-btn'),currencySelect=document[_0x22b7a4(0x1aa)]('currencySelect'),customCurrencySelect=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x1de)),currencyTrigger=document['getElementById'](_0x22b7a4(0x1a8)),currencyDropdown=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x11f)),currencyText=document[_0x22b7a4(0x1aa)]('currencyText'),flag1=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x16b)),flag2=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x12e)),timeframeSelect=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x1a2)),customTimeframeSelect=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x13c)),timeframeTrigger=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x1e4)),timeframeDropdown=document['getElementById']('timeframeDropdown'),timeframeText=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x1ae)),signalPlaceholder=document['getElementById'](_0x22b7a4(0x1dc)),imageInput=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x124)),previewImage=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x153)),signalInfo=document['getElementById']('signalInfo'),calculatingIndicators=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x162)),getSignalBtn=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x195)),customLanguageSelect=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x130)),languageTrigger=document[_0x22b7a4(0x1aa)]('languageTrigger'),languageModal=document['getElementById'](_0x22b7a4(0x1a5)),languageModalClose=document['getElementById'](_0x22b7a4(0x147)),languageModalList=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x131)),languageFlag=document[_0x22b7a4(0x1aa)]('languageFlag'),newPhotoBtn=document[_0x22b7a4(0x1aa)](_0x22b7a4(0x158));let selectedImage=null,currentMode=_0x22b7a4(0x1a1),currentLanguage='en';function initTelegramWebApp(){const _0x40cac8=_0x22b7a4;if(window[_0x40cac8(0x176)]&&window[_0x40cac8(0x176)][_0x40cac8(0x156)]){const _0x16123e=window[_0x40cac8(0x176)]['WebApp'];_0x16123e['ready'](),_0x16123e[_0x40cac8(0x188)](),_0x16123e[_0x40cac8(0x14c)](),_0x16123e[_0x40cac8(0x140)]();const _0x393251=()=>{const _0x595f49=_0x40cac8,_0x44956b=document[_0x595f49(0x1b9)](_0x595f49(0x1c5));if(!_0x44956b)return;let _0x59608e=0x0;if(_0x16123e[_0x595f49(0x126)]&&_0x16123e[_0x595f49(0x126)][_0x595f49(0x145)]){const _0x5379f0=_0x16123e['viewport'][_0x595f49(0x145)];_0x59608e=_0x5379f0&&typeof _0x5379f0[_0x595f49(0x166)]===_0x595f49(0x13f)?_0x5379f0[_0x595f49(0x166)]:0x0;}else _0x16123e[_0x595f49(0x145)]&&(_0x59608e=_0x16123e[_0x595f49(0x145)][_0x595f49(0x166)]||0x0);const _0x42803=0x14;_0x44956b[_0x595f49(0x1a3)]['paddingTop']=_0x59608e+_0x42803+'px';};_0x393251(),_0x16123e[_0x40cac8(0x1c8)]&&_0x16123e[_0x40cac8(0x126)]&&_0x16123e[_0x40cac8(0x1c8)](_0x40cac8(0x15b),_0x393251);}}document[_0x22b7a4(0x1d9)]===_0x22b7a4(0x1e2)?document[_0x22b7a4(0x119)]('DOMContentLoaded',initTelegramWebApp):(initTelegramWebApp(),setTimeout(initTelegramWebApp,0x64));const translations={'en':{'selectLanguage':_0x22b7a4(0x186),'placeholderText':_0x22b7a4(0x155),'getSignal':_0x22b7a4(0x14f),'analyzing':_0x22b7a4(0x14a),'loadMorePhotos':_0x22b7a4(0x14b),'calculatingIndicators':_0x22b7a4(0x1af),'analyzingIndicators':_0x22b7a4(0x1ba),'calculating':_0x22b7a4(0x175),'ready':_0x22b7a4(0x1a7),'sign':_0x22b7a4(0x173),'currencyPair':_0x22b7a4(0x17a),'timeframe':_0x22b7a4(0x165),'accuracy':_0x22b7a4(0x174),'direction':_0x22b7a4(0x1e5),'signalFound':_0x22b7a4(0x1c9),'buy':_0x22b7a4(0x129),'sell':_0x22b7a4(0x159)},'ru':{'selectLanguage':'Выбрать\x20язык','placeholderText':_0x22b7a4(0x1ac),'getSignal':_0x22b7a4(0x117),'analyzing':_0x22b7a4(0x18b),'loadMorePhotos':_0x22b7a4(0x13d),'calculatingIndicators':_0x22b7a4(0x1a0),'analyzingIndicators':_0x22b7a4(0x19b),'calculating':_0x22b7a4(0x17b),'ready':_0x22b7a4(0x15e),'sign':_0x22b7a4(0x157),'currencyPair':'Валютная\x20пара','timeframe':_0x22b7a4(0x196),'accuracy':_0x22b7a4(0x116),'direction':_0x22b7a4(0x17c),'signalFound':_0x22b7a4(0x169),'buy':_0x22b7a4(0x198),'sell':'ПРОДАЖА'}},timeframeOptions={'forex':[{'value':'1m','label':'1M'},{'value':'3m','label':'3M'},{'value':'5m','label':'5M'},{'value':_0x22b7a4(0x1c0),'label':'15M'},{'value':_0x22b7a4(0x12d),'label':_0x22b7a4(0x1dd)}],'otc':[{'value':'5s','label':'5S'},{'value':_0x22b7a4(0x1d8),'label':_0x22b7a4(0x143)},{'value':'30s','label':'30S'},{'value':'1m','label':'1M'},{'value':'5m','label':'5M'},{'value':_0x22b7a4(0x1c0),'label':_0x22b7a4(0x12f)}]};modeButtons[_0x22b7a4(0x16d)](_0xdad7e6=>{const _0x22d9f5=_0x22b7a4,_0x1bdaf8=_0x87adc0=>{const _0x6fe0cd=_0x1d6e;_0x87adc0[_0x6fe0cd(0x12a)](),_0x87adc0[_0x6fe0cd(0x16a)](),modeButtons[_0x6fe0cd(0x16d)](_0x39f212=>{const _0x11bd31=_0x6fe0cd;_0x39f212['classList'][_0x11bd31(0x197)](_0x11bd31(0x1b8)),_0x39f212['style'][_0x11bd31(0x11b)]=_0x11bd31(0x17e);}),_0xdad7e6[_0x6fe0cd(0x1e0)]['add'](_0x6fe0cd(0x1b8)),_0xdad7e6['style']['transform']='scale(1.05)',setTimeout(()=>{const _0x29a4c1=_0x6fe0cd;_0xdad7e6['style'][_0x29a4c1(0x11b)]='scale(1.02)';},0xc8),currentMode=_0xdad7e6['dataset'][_0x6fe0cd(0x1a4)],updateCurrencyOptions(),updateCustomCurrencyOptions(),updateTimeframeOptions(),setTimeout(()=>{const _0x49038c=_0x6fe0cd;_0xdad7e6['blur'](),document['activeElement']&&document[_0x49038c(0x170)][_0x49038c(0x168)](),document[_0x49038c(0x18a)]&&(document[_0x49038c(0x18a)]['focus'](),document[_0x49038c(0x18a)][_0x49038c(0x168)]());},0x0);};_0xdad7e6[_0x22d9f5(0x119)](_0x22d9f5(0x19e),_0x1991f2=>_0x1991f2[_0x22d9f5(0x12a)]()),_0xdad7e6[_0x22d9f5(0x119)](_0x22d9f5(0x177),_0x1816ce=>_0x1816ce['preventDefault']()),_0xdad7e6[_0x22d9f5(0x119)](_0x22d9f5(0x138),_0x1bdaf8),_0xdad7e6[_0x22d9f5(0x119)](_0x22d9f5(0x125),_0x5d6391=>{const _0x574705=_0x22d9f5;_0x5d6391[_0x574705(0x12a)](),_0x1bdaf8(_0x5d6391),_0xdad7e6[_0x574705(0x168)]();}),_0xdad7e6[_0x22d9f5(0x119)](_0x22d9f5(0x1c7),_0x1ed1f8=>{const _0x31dffd=_0x22d9f5;_0x1ed1f8[_0x31dffd(0x12a)](),_0xdad7e6[_0x31dffd(0x168)]();}),_0xdad7e6[_0x22d9f5(0x119)](_0x22d9f5(0x150),()=>_0xdad7e6[_0x22d9f5(0x168)]()),_0xdad7e6['addEventListener'](_0x22d9f5(0x191),()=>_0xdad7e6[_0x22d9f5(0x168)]());});function _0x1d6e(_0x3357b7,_0x2ad667){_0x3357b7=_0x3357b7-0x116;const _0x59c868=_0x59c8();let _0x1d6e94=_0x59c868[_0x3357b7];return _0x1d6e94;}function updateCurrencyOptions(){const _0x399b25=_0x22b7a4,_0x29a4c8=currencySelect[_0x399b25(0x11a)](_0x399b25(0x122)),_0x3bbe99=currencySelect[_0x399b25(0x1d3)];_0x29a4c8[_0x399b25(0x16d)](_0x437334=>{const _0x458b9a=_0x399b25,_0x587751=_0x437334['value'];currentMode==='otc'?_0x437334[_0x458b9a(0x1cb)]=_0x587751+'\x20OTC':_0x437334[_0x458b9a(0x1cb)]=_0x587751;}),currencySelect[_0x399b25(0x1d3)]=_0x3bbe99;}function updateTimeframeOptions(){const _0x533c6a=_0x22b7a4,_0x53af5e=timeframeOptions[currentMode],_0x1f2213=timeframeSelect['value'];timeframeSelect[_0x533c6a(0x18e)]='',_0x53af5e[_0x533c6a(0x16d)](_0x4da6f0=>{const _0x1c95b6=_0x533c6a,_0x2d527d=document[_0x1c95b6(0x1e7)](_0x1c95b6(0x122));_0x2d527d[_0x1c95b6(0x1d3)]=_0x4da6f0[_0x1c95b6(0x1d3)],_0x2d527d[_0x1c95b6(0x1cb)]=_0x4da6f0['label'],timeframeSelect[_0x1c95b6(0x13a)](_0x2d527d);});let _0x3a34ac=_0x53af5e[0x0][_0x533c6a(0x1d3)];_0x53af5e['find'](_0x5d6da1=>_0x5d6da1[_0x533c6a(0x1d3)]===_0x1f2213)&&(_0x3a34ac=_0x1f2213);timeframeSelect[_0x533c6a(0x1d3)]=_0x3a34ac,timeframeDropdown['innerHTML']='',_0x53af5e[_0x533c6a(0x16d)](_0x1a4cbc=>{const _0x25519e=_0x533c6a,_0x309450=document[_0x25519e(0x1e7)](_0x25519e(0x182));_0x309450[_0x25519e(0x189)]='custom-option',_0x309450[_0x25519e(0x1c6)][_0x25519e(0x1d3)]=_0x1a4cbc['value'],_0x309450[_0x25519e(0x18e)]='<span\x20class=\x22timeframe-text\x22>'+_0x1a4cbc[_0x25519e(0x1be)]+'</span>',_0x1a4cbc[_0x25519e(0x1d3)]===_0x3a34ac&&_0x309450[_0x25519e(0x1e0)][_0x25519e(0x18d)](_0x25519e(0x1e1)),_0x309450[_0x25519e(0x119)]('click',_0x473383=>{const _0x3e9705=_0x25519e;_0x473383[_0x3e9705(0x16a)]();const _0xcbcb80=_0x309450['dataset']['value'];timeframeSelect['value']=_0xcbcb80,timeframeText[_0x3e9705(0x1cb)]=_0x1a4cbc[_0x3e9705(0x1be)],timeframeDropdown['querySelectorAll'](_0x3e9705(0x133))[_0x3e9705(0x16d)](_0x175e2e=>{const _0xf87604=_0x3e9705;_0x175e2e[_0xf87604(0x1e0)][_0xf87604(0x197)]('selected');}),_0x309450['classList']['add'](_0x3e9705(0x1e1)),timeframeTrigger[_0x3e9705(0x1e0)]['remove'](_0x3e9705(0x1b8)),timeframeDropdown[_0x3e9705(0x1e0)][_0x3e9705(0x197)](_0x3e9705(0x1b7)),timeframeSelect['dispatchEvent'](new Event('change')),setTimeout(()=>{removeAllFocus();},0x64);}),timeframeDropdown['appendChild'](_0x309450);});const _0x5eaa0a=_0x53af5e[_0x533c6a(0x1ab)](_0x394eb0=>_0x394eb0[_0x533c6a(0x1d3)]===_0x3a34ac);_0x5eaa0a&&(timeframeText[_0x533c6a(0x1cb)]=_0x5eaa0a[_0x533c6a(0x1be)]);}currencyTrigger['addEventListener'](_0x22b7a4(0x138),_0x1e7aa2=>{const _0x66bf11=_0x22b7a4;_0x1e7aa2[_0x66bf11(0x16a)](),timeframeTrigger[_0x66bf11(0x1e0)][_0x66bf11(0x197)]('active'),timeframeDropdown[_0x66bf11(0x1e0)][_0x66bf11(0x197)](_0x66bf11(0x1b7)),languageModal&&languageModal[_0x66bf11(0x1e0)]['remove']('active'),currencyTrigger[_0x66bf11(0x1e0)][_0x66bf11(0x1a6)](_0x66bf11(0x1b8)),currencyDropdown[_0x66bf11(0x1e0)]['toggle'](_0x66bf11(0x1b7));}),timeframeTrigger[_0x22b7a4(0x119)](_0x22b7a4(0x138),_0x2abde8=>{const _0x3c704b=_0x22b7a4;_0x2abde8[_0x3c704b(0x16a)](),currencyTrigger['classList'][_0x3c704b(0x197)](_0x3c704b(0x1b8)),currencyDropdown['classList'][_0x3c704b(0x197)]('open'),languageModal&&languageModal[_0x3c704b(0x1e0)][_0x3c704b(0x197)](_0x3c704b(0x1b8)),timeframeTrigger[_0x3c704b(0x1e0)][_0x3c704b(0x1a6)](_0x3c704b(0x1b8)),timeframeDropdown['classList'][_0x3c704b(0x1a6)]('open');}),languageTrigger[_0x22b7a4(0x119)](_0x22b7a4(0x138),_0x1b1d45=>{const _0xa4f135=_0x22b7a4;_0x1b1d45[_0xa4f135(0x16a)](),currencyTrigger[_0xa4f135(0x1e0)]['remove'](_0xa4f135(0x1b8)),currencyDropdown[_0xa4f135(0x1e0)]['remove'](_0xa4f135(0x1b7)),timeframeTrigger['classList'][_0xa4f135(0x197)]('active'),timeframeDropdown['classList'][_0xa4f135(0x197)]('open'),languageModal[_0xa4f135(0x1e0)][_0xa4f135(0x18d)](_0xa4f135(0x1b8)),updateLanguageModalTitle();}),languageModalClose[_0x22b7a4(0x119)](_0x22b7a4(0x138),_0xacbcfc=>{const _0x5b04ad=_0x22b7a4;_0xacbcfc[_0x5b04ad(0x16a)](),languageModal[_0x5b04ad(0x1e0)][_0x5b04ad(0x197)](_0x5b04ad(0x1b8)),setTimeout(()=>{removeAllFocus();},0x64);}),languageModal[_0x22b7a4(0x119)](_0x22b7a4(0x138),_0x213f2b=>{const _0x2d5aa6=_0x22b7a4;_0x213f2b[_0x2d5aa6(0x1bf)]===languageModal&&(languageModal[_0x2d5aa6(0x1e0)][_0x2d5aa6(0x197)](_0x2d5aa6(0x1b8)),setTimeout(()=>{removeAllFocus();},0x64));}),languageModalList['querySelectorAll'](_0x22b7a4(0x11c))['forEach'](_0x3efffd=>{const _0x14307f=_0x22b7a4;_0x3efffd['addEventListener'](_0x14307f(0x138),_0x5dbda3=>{const _0x4a0f71=_0x14307f;_0x5dbda3['stopPropagation']();const _0x43c007=_0x3efffd[_0x4a0f71(0x1c6)][_0x4a0f71(0x161)],_0x3cb220=_0x3efffd['dataset'][_0x4a0f71(0x13e)];_0x43c007&&_0x43c007!==currentLanguage?(currentLanguage=_0x43c007,localStorage[_0x4a0f71(0x1da)](_0x4a0f71(0x1b3),currentLanguage),languageFlag['src']=_0x4a0f71(0x1cd)+_0x3cb220+_0x4a0f71(0x193),languageModalList[_0x4a0f71(0x11a)](_0x4a0f71(0x11c))[_0x4a0f71(0x16d)](_0x5ac3bd=>{const _0xd8263b=_0x4a0f71;_0x5ac3bd[_0xd8263b(0x1e0)][_0xd8263b(0x197)](_0xd8263b(0x1e1));}),_0x3efffd[_0x4a0f71(0x1e0)][_0x4a0f71(0x18d)]('selected'),languageModal[_0x4a0f71(0x1e0)][_0x4a0f71(0x197)](_0x4a0f71(0x1b8)),updateLanguage()):languageModal[_0x4a0f71(0x1e0)]['remove']('active'),setTimeout(()=>{removeAllFocus();},0x64);});}),document[_0x22b7a4(0x119)](_0x22b7a4(0x138),_0x44a362=>{const _0x8be35=_0x22b7a4;!customCurrencySelect[_0x8be35(0x142)](_0x44a362['target'])&&(currencyTrigger[_0x8be35(0x1e0)][_0x8be35(0x197)](_0x8be35(0x1b8)),currencyDropdown[_0x8be35(0x1e0)][_0x8be35(0x197)](_0x8be35(0x1b7))),!customTimeframeSelect[_0x8be35(0x142)](_0x44a362[_0x8be35(0x1bf)])&&(timeframeTrigger[_0x8be35(0x1e0)][_0x8be35(0x197)](_0x8be35(0x1b8)),timeframeDropdown[_0x8be35(0x1e0)][_0x8be35(0x197)]('open'));}),currencyDropdown['querySelectorAll'](_0x22b7a4(0x133))[_0x22b7a4(0x16d)](_0x1377d9=>{const _0x5c0bdd=_0x22b7a4;_0x1377d9['addEventListener'](_0x5c0bdd(0x138),_0x325436=>{const _0xc9c4bf=_0x5c0bdd;_0x325436[_0xc9c4bf(0x16a)]();const _0x535659=_0x1377d9[_0xc9c4bf(0x1c6)][_0xc9c4bf(0x1d3)],_0x362647=_0x1377d9[_0xc9c4bf(0x1c6)][_0xc9c4bf(0x16b)],_0x3ab4b7=_0x1377d9['dataset'][_0xc9c4bf(0x12e)];currencySelect[_0xc9c4bf(0x1d3)]=_0x535659,currentMode===_0xc9c4bf(0x1a1)?currencyText['textContent']=_0x535659+_0xc9c4bf(0x163):currencyText[_0xc9c4bf(0x1cb)]=_0x535659,flag1&&flag2&&_0x362647&&_0x3ab4b7&&(flag1[_0xc9c4bf(0x18c)]=_0xc9c4bf(0x1cd)+_0x362647+'.svg',flag2[_0xc9c4bf(0x18c)]=_0xc9c4bf(0x1cd)+_0x3ab4b7+'.svg'),currencyDropdown[_0xc9c4bf(0x11a)](_0xc9c4bf(0x133))['forEach'](_0x2a88d3=>{const _0x53be19=_0xc9c4bf;_0x2a88d3['classList'][_0x53be19(0x197)](_0x53be19(0x1e1));}),_0x1377d9[_0xc9c4bf(0x1e0)][_0xc9c4bf(0x18d)]('selected'),currencyTrigger[_0xc9c4bf(0x1e0)][_0xc9c4bf(0x197)](_0xc9c4bf(0x1b8)),currencyDropdown[_0xc9c4bf(0x1e0)]['remove']('open'),currencySelect[_0xc9c4bf(0x1ca)](new Event(_0xc9c4bf(0x17f))),setTimeout(()=>{removeAllFocus();},0x64);});}),currencySelect[_0x22b7a4(0x119)](_0x22b7a4(0x17f),()=>{updateCurrencyOptions(),updateCustomCurrencyOptions();}),timeframeSelect[_0x22b7a4(0x119)](_0x22b7a4(0x17f),()=>{const _0x491e6a=_0x22b7a4;timeframeSelect[_0x491e6a(0x1a3)]['outline']='none',timeframeSelect[_0x491e6a(0x1a3)][_0x491e6a(0x181)]=_0x491e6a(0x16c),timeframeSelect[_0x491e6a(0x1a3)][_0x491e6a(0x1ad)]='0\x202px\x208px\x20rgba(0,\x200,\x200,\x200.2)',setTimeout(()=>{const _0x227a7d=_0x491e6a;timeframeSelect[_0x227a7d(0x168)](),removeAllFocus();},0x64);});function removeAllFocus(){const _0x27e2a8=_0x22b7a4;document[_0x27e2a8(0x170)]&&document['activeElement']!==document[_0x27e2a8(0x18a)]&&document[_0x27e2a8(0x170)][_0x27e2a8(0x168)](),document[_0x27e2a8(0x18a)]&&(document[_0x27e2a8(0x18a)][_0x27e2a8(0x192)](),document[_0x27e2a8(0x18a)][_0x27e2a8(0x168)]());}document[_0x22b7a4(0x119)]('touchstart',_0x45e9b3=>{const _0x17a0e9=_0x22b7a4;if(_0x45e9b3[_0x17a0e9(0x1bf)]===currencySelect||_0x45e9b3['target']===timeframeSelect)return;document[_0x17a0e9(0x170)]&&document['activeElement']!==_0x45e9b3['target']&&document['activeElement']!==currencySelect&&document[_0x17a0e9(0x170)]!==timeframeSelect&&document['activeElement'][_0x17a0e9(0x168)]();},!![]),document[_0x22b7a4(0x119)](_0x22b7a4(0x125),_0x4f742c=>{const _0x13f89f=_0x22b7a4,_0x32c4e0=[currencySelect,timeframeSelect,getSignalBtn,newPhotoBtn,customLanguageSelect,signalPlaceholder,...modeButtons];!_0x32c4e0[_0x13f89f(0x179)](_0x4f742c['target'])&&!_0x32c4e0['some'](_0x42e8cc=>_0x42e8cc[_0x13f89f(0x142)](_0x4f742c[_0x13f89f(0x1bf)]))&&setTimeout(()=>{removeAllFocus();},0x64);},!![]),document[_0x22b7a4(0x119)]('mousedown',_0x48aad7=>{const _0x457af2=_0x22b7a4;if(_0x48aad7[_0x457af2(0x1bf)]===currencySelect||_0x48aad7[_0x457af2(0x1bf)]===timeframeSelect)return;if(document['activeElement']===currencySelect||document['activeElement']===timeframeSelect){const _0x102b5e=document[_0x457af2(0x170)];_0x102b5e[_0x457af2(0x1a3)][_0x457af2(0x1d2)]=_0x457af2(0x17d),_0x102b5e[_0x457af2(0x1a3)][_0x457af2(0x181)]=_0x457af2(0x16c),_0x102b5e[_0x457af2(0x1a3)][_0x457af2(0x1ad)]=_0x457af2(0x1d6);}document[_0x457af2(0x170)]&&document[_0x457af2(0x170)]!==_0x48aad7[_0x457af2(0x1bf)]&&document[_0x457af2(0x170)]!==currencySelect&&document[_0x457af2(0x170)]!==timeframeSelect&&document[_0x457af2(0x170)][_0x457af2(0x168)]();},!![]);const handlePlaceholderClick=_0x457958=>{const _0x42e029=_0x22b7a4;_0x457958[_0x42e029(0x12a)](),_0x457958[_0x42e029(0x16a)](),imageInput[_0x42e029(0x138)](),setTimeout(()=>{const _0x3c2a76=_0x42e029;signalPlaceholder['blur'](),document[_0x3c2a76(0x170)]&&document['activeElement'][_0x3c2a76(0x168)](),document['body']&&(document[_0x3c2a76(0x18a)]['focus'](),document['body'][_0x3c2a76(0x168)]());},0x0);};signalPlaceholder['addEventListener'](_0x22b7a4(0x19e),_0x10a11e=>_0x10a11e[_0x22b7a4(0x12a)]()),signalPlaceholder['addEventListener'](_0x22b7a4(0x177),_0x1766e1=>_0x1766e1['preventDefault']()),signalPlaceholder['addEventListener'](_0x22b7a4(0x138),handlePlaceholderClick),signalPlaceholder[_0x22b7a4(0x119)](_0x22b7a4(0x125),_0x15f654=>{const _0x2a426b=_0x22b7a4;_0x15f654[_0x2a426b(0x12a)](),handlePlaceholderClick(_0x15f654),signalPlaceholder[_0x2a426b(0x168)]();}),signalPlaceholder[_0x22b7a4(0x119)](_0x22b7a4(0x1c7),_0x2f69ec=>{const _0x23203b=_0x22b7a4;_0x2f69ec['preventDefault'](),signalPlaceholder[_0x23203b(0x168)]();}),signalPlaceholder[_0x22b7a4(0x119)](_0x22b7a4(0x150),()=>signalPlaceholder['blur']()),signalPlaceholder['addEventListener']('touchcancel',()=>signalPlaceholder[_0x22b7a4(0x168)]()),imageInput['addEventListener'](_0x22b7a4(0x17f),_0x5a858d=>{const _0x113088=_0x22b7a4,_0x5403dc=_0x5a858d[_0x113088(0x1bf)]['files'][0x0];if(_0x5403dc){const _0xbd066a=new FileReader();_0xbd066a[_0x113088(0x167)]=_0x2da363=>{const _0xf74ae5=_0x113088;selectedImage=_0x2da363[_0xf74ae5(0x1bf)]['result'],previewImage[_0xf74ae5(0x18c)]=selectedImage,signalPlaceholder[_0xf74ae5(0x1a3)][_0xf74ae5(0x1e6)]='0',signalPlaceholder[_0xf74ae5(0x1a3)]['transform']=_0xf74ae5(0x1d4),setTimeout(()=>{const _0x591399=_0xf74ae5;signalPlaceholder[_0x591399(0x1a3)]['display']='none',previewImage[_0x591399(0x1a3)][_0x591399(0x194)]=_0x591399(0x190),previewImage[_0x591399(0x1a3)][_0x591399(0x1e6)]='0',signalInfo[_0x591399(0x1a3)][_0x591399(0x194)]='none',setTimeout(()=>{const _0x580934=_0x591399;previewImage[_0x580934(0x1a3)][_0x580934(0x1cc)]=_0x580934(0x1b4),previewImage[_0x580934(0x1a3)]['opacity']='1';},0x32);},0x12c),getSignalBtn[_0xf74ae5(0x178)]=![],getSignalBtn[_0xf74ae5(0x1a3)]['opacity']='1',getSignalBtn['style'][_0xf74ae5(0x1bc)]=_0xf74ae5(0x19c),getSignalBtn[_0xf74ae5(0x1a3)][_0xf74ae5(0x11b)]='scale(1)';},_0xbd066a[_0x113088(0x144)](_0x5403dc);}});const handleGetSignalClick=_0x3d01ff=>{const _0x2de5b0=_0x22b7a4;_0x3d01ff[_0x2de5b0(0x12a)](),_0x3d01ff[_0x2de5b0(0x16a)]();if(!selectedImage){getSignalBtn[_0x2de5b0(0x1a3)]['transition']=_0x2de5b0(0x1b6),getSignalBtn[_0x2de5b0(0x1a3)][_0x2de5b0(0x11b)]=_0x2de5b0(0x1d4),getSignalBtn[_0x2de5b0(0x1a3)]['opacity']=_0x2de5b0(0x12b),setTimeout(()=>{const _0x36ea5d=_0x2de5b0;getSignalBtn[_0x36ea5d(0x1a3)][_0x36ea5d(0x11b)]=_0x36ea5d(0x17e),getSignalBtn[_0x36ea5d(0x1a3)][_0x36ea5d(0x1e6)]='1';},0x96),setTimeout(()=>{const _0xda86da=_0x2de5b0;getSignalBtn[_0xda86da(0x1a3)]['transition']='',getSignalBtn[_0xda86da(0x168)](),document['activeElement']&&document[_0xda86da(0x170)][_0xda86da(0x168)](),document[_0xda86da(0x18a)]&&(document[_0xda86da(0x18a)][_0xda86da(0x192)](),document['body'][_0xda86da(0x168)]());},0x12c);return;}previewImage['style'][_0x2de5b0(0x1cc)]=_0x2de5b0(0x127),previewImage[_0x2de5b0(0x1a3)][_0x2de5b0(0x1e6)]='0',previewImage[_0x2de5b0(0x1a3)][_0x2de5b0(0x11b)]=_0x2de5b0(0x1d4),getSignalBtn['disabled']=!![],getSignalBtn[_0x2de5b0(0x1e0)]['add'](_0x2de5b0(0x1e2)),getSignalBtn[_0x2de5b0(0x1cb)]=translations[currentLanguage][_0x2de5b0(0x1d1)],getSignalBtn['style']['background']=_0x2de5b0(0x1c2),signalPlaceholder[_0x2de5b0(0x1a3)]['display']=_0x2de5b0(0x17d),signalInfo[_0x2de5b0(0x1a3)][_0x2de5b0(0x194)]=_0x2de5b0(0x17d),setTimeout(()=>{const _0x3bfa5a=_0x2de5b0;previewImage[_0x3bfa5a(0x1a3)]['display']=_0x3bfa5a(0x17d),calculatingIndicators[_0x3bfa5a(0x1a3)][_0x3bfa5a(0x194)]='flex',calculatingIndicators[_0x3bfa5a(0x1a3)]['opacity']='0',setTimeout(()=>{const _0x19e0ef=_0x3bfa5a;calculatingIndicators['style'][_0x19e0ef(0x1cc)]='opacity\x200.5s\x20ease',calculatingIndicators[_0x19e0ef(0x1a3)]['opacity']='1';},0x32),animateIndicatorsCalculation();},0x12c),setTimeout(()=>{const _0x2d3b53=_0x2de5b0;calculatingIndicators[_0x2d3b53(0x1a3)]['opacity']='0',setTimeout(()=>{const _0x480132=_0x2d3b53;calculatingIndicators[_0x480132(0x1a3)][_0x480132(0x194)]='none',analyzeSignal(),getSignalBtn[_0x480132(0x1e0)][_0x480132(0x197)](_0x480132(0x1e2)),getSignalBtn['style'][_0x480132(0x194)]='none',newPhotoBtn[_0x480132(0x1a3)][_0x480132(0x194)]=_0x480132(0x16e),newPhotoBtn[_0x480132(0x1a3)][_0x480132(0x1e6)]='0',newPhotoBtn[_0x480132(0x178)]=![],newPhotoBtn[_0x480132(0x1e0)][_0x480132(0x197)]('loading'),setTimeout(()=>{const _0x273ef4=_0x480132;newPhotoBtn[_0x273ef4(0x1a3)][_0x273ef4(0x1cc)]=_0x273ef4(0x1b4),newPhotoBtn[_0x273ef4(0x1a3)][_0x273ef4(0x1e6)]='1';},0x64),setTimeout(()=>{const _0x203a7a=_0x480132;getSignalBtn[_0x203a7a(0x168)](),document[_0x203a7a(0x170)]&&document['activeElement']['blur'](),document[_0x203a7a(0x18a)]&&(document['body'][_0x203a7a(0x192)](),document[_0x203a7a(0x18a)][_0x203a7a(0x168)]());},0x0);},0x1f4);},0xaf0);};getSignalBtn[_0x22b7a4(0x119)]('mousedown',_0x1b787e=>_0x1b787e[_0x22b7a4(0x12a)]()),getSignalBtn['addEventListener']('touchstart',_0x27dd62=>_0x27dd62['preventDefault']()),getSignalBtn[_0x22b7a4(0x119)](_0x22b7a4(0x138),handleGetSignalClick),getSignalBtn[_0x22b7a4(0x119)](_0x22b7a4(0x125),_0x4f6568=>{const _0x17731a=_0x22b7a4;_0x4f6568[_0x17731a(0x12a)](),handleGetSignalClick(_0x4f6568),getSignalBtn[_0x17731a(0x168)]();}),getSignalBtn[_0x22b7a4(0x119)]('mouseup',_0x499e1f=>{const _0x4e5fdf=_0x22b7a4;_0x499e1f['preventDefault'](),getSignalBtn[_0x4e5fdf(0x168)]();}),getSignalBtn['addEventListener'](_0x22b7a4(0x150),()=>getSignalBtn[_0x22b7a4(0x168)]()),getSignalBtn[_0x22b7a4(0x119)]('touchcancel',()=>getSignalBtn['blur']()),getSignalBtn[_0x22b7a4(0x119)](_0x22b7a4(0x150),()=>{const _0x4dacf1=_0x22b7a4;getSignalBtn[_0x4dacf1(0x168)]();});function animateIndicatorsCalculation(){const _0x32fc06=_0x22b7a4,_0x46af23=calculatingIndicators[_0x32fc06(0x11a)]('.indicator-item'),_0x1419ba=0x190;_0x46af23[_0x32fc06(0x16d)](_0xa6f7bb=>{const _0x1935ff=_0x32fc06,_0x3f23ee=_0xa6f7bb[_0x1935ff(0x1b9)](_0x1935ff(0x1c4));_0x3f23ee[_0x1935ff(0x1e0)][_0x1935ff(0x197)]('completed'),_0x3f23ee['classList'][_0x1935ff(0x18d)](_0x1935ff(0x12c)),_0x3f23ee['textContent']=translations[currentLanguage][_0x1935ff(0x12c)];}),_0x46af23['forEach']((_0x42e5c4,_0xaee4b3)=>{setTimeout(()=>{const _0x1ad1af=_0x1d6e,_0x2c2729=_0x42e5c4[_0x1ad1af(0x1b9)](_0x1ad1af(0x1c4));_0x2c2729[_0x1ad1af(0x1e0)][_0x1ad1af(0x197)](_0x1ad1af(0x12c)),_0x2c2729[_0x1ad1af(0x1e0)][_0x1ad1af(0x18d)](_0x1ad1af(0x136)),_0x2c2729[_0x1ad1af(0x1cb)]=translations[currentLanguage][_0x1ad1af(0x139)];},_0x1419ba*(_0xaee4b3+0x1));});}function _0x59c8(){const _0x3781e2=['15M','customLanguageSelect','languageModalList','detailDirection','.custom-option','.calculating-title','sell','completed','toUpperCase','click','ready','appendChild','svg/gb.svg','customTimeframeSelect','Загрузить\x20еще\x20фото','flag','number','enableClosingConfirmation','detailAccuracy','contains','15S','readAsDataURL','safeAreaInsets','analyzingIndicators','languageModalClose','random','3214320LuyYFD','ANALYZING...','Load\x20more\x20photos','requestFullscreen','[data-i18n]','buy','GET\x20SIGNAL','mouseleave','progressFill','Select\x20the\x20language','previewImage','.svg\x22\x20alt=\x22','Click\x20to\x20take\x20a\x20photo\x20or\x20select\x20an\x20image','WebApp','СИГНАЛ','newPhotoBtn','SELL','30LPAuis','viewportChanged','placeholderText','detailPair','Готово\x20✓','.currency-text','insertBefore','lang','calculatingIndicators','\x20OTC','loadMorePhotos','Timeframe','top','onload','blur','Сигнал\x20найден','stopPropagation','flag1','rgba(255,\x20255,\x20255,\x200.2)','forEach','flex','svg/ru.svg','activeElement','progressPercent','22100841erESVq','SIGNAL','Accuracy','Calculating...','Telegram','touchstart','disabled','includes','Currency\x20Pair','Вычисляется...','Направление','none','scale(1)','change','1130751LzRcID','borderColor','div','.placeholder-text','3805844xlXBgl','26606TPOMhV','Select\x20Language','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<svg\x20width=\x2240\x22\x20height=\x2240\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20fill=\x22none\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<path\x20d=\x22M7\x2017L12\x2012L17\x2017M7\x2011L12\x206L17\x2011\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222\x22\x20stroke-linecap=\x22round\x22\x20stroke-linejoin=\x22round\x22/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</svg>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','expand','className','body','АНАЛИЗИРУЮ...','src','add','innerHTML','getItem','block','touchcancel','focus','.svg','display','getSignalBtn','Таймфрейм','remove','ПОКУПКА','40hboEAL','createTextNode','Анализ\x20технических\x20индикаторов...','pointer','.custom-option[data-value=\x22EURUSD\x22]','mousedown','\x22\x20class=\x22flag-icon\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22svg/','Вычисление\x20индикаторов','otc','timeframeSelect','style','mode','languageModal','toggle','Ready\x20✓','currencyTrigger','not-allowed','getElementById','find','Нажмите,\x20чтобы\x20сделать\x20фото\x20или\x20выбрать\x20изображение','boxShadow','timeframeText','Calculating\x20indicators','Выберите\x20язык','width','floor','language','opacity\x200.5s\x20ease','.language-modal-title','all\x200.3s\x20ease','open','active','querySelector','Analyzing\x20technical\x20indicators...','linear-gradient(135deg,\x20#ffa500\x200%,\x20#ffd700\x20100%)','cursor','down','label','target','15m','875586pqQyOr','linear-gradient(135deg,\x20#ffa500\x200%,\x20#ffa500\x20100%)','nextSibling','.indicator-status','.header','dataset','mouseup','onEvent','Signal\x20found','dispatchEvent','textContent','transition','svg/','translateY(20px)\x20scale(0.95)','direction','0.5','analyzing','outline','value','scale(0.95)','direction-icon\x20','0\x202px\x208px\x20rgba(0,\x200,\x200,\x200.2)','287384zWOBlQ','15s','readyState','setItem','detailTimeframe','signalPlaceholder','30M','customCurrencySelect','svg','classList','selected','loading','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<svg\x20width=\x2240\x22\x20height=\x2240\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20fill=\x22none\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<path\x20d=\x22M7\x2013L12\x2018L17\x2013M7\x206L12\x2011L17\x206\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222\x22\x20stroke-linecap=\x22round\x22\x20stroke-linejoin=\x22round\x22/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</svg>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','timeframeTrigger','Direction','opacity','createElement','Точность','ПОЛУЧИТЬ\x20СИГНАЛ','translateY(0)\x20scale(1)','addEventListener','querySelectorAll','transform','.language-modal-option','getSignal','selectedIndex','currencyDropdown','\x22\x20class=\x22flag-icon\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','background','option','direction-text\x20','imageInput','touchend','viewport','opacity\x200.3s\x20ease,\x20transform\x200.3s\x20ease','getAttribute','BUY','preventDefault','0.7','calculating','30m','flag2'];_0x59c8=function(){return _0x3781e2;};return _0x59c8();}function analyzeSignal(){const _0xaa14c5=_0x22b7a4,_0x1fbfc6=[_0xaa14c5(0x129),_0xaa14c5(0x159)],_0x415fce=_0x1fbfc6[Math[_0xaa14c5(0x1b2)](Math[_0xaa14c5(0x148)]()*_0x1fbfc6['length'])],_0x1dc2ca=_0x415fce==='BUY',_0x5ee068=Math[_0xaa14c5(0x1b2)](Math[_0xaa14c5(0x148)]()*0x3)+0x61,_0x507331=currencySelect['options'][currencySelect[_0xaa14c5(0x11e)]],_0x164b99=_0x507331[_0xaa14c5(0x1d3)],_0xbfddd9=_0x507331[_0xaa14c5(0x1c6)]['flag1'],_0x375bcd=_0x507331[_0xaa14c5(0x1c6)][_0xaa14c5(0x12e)],_0x542786=document['getElementById']('signalCurrencyFlags');_0x542786&&_0xbfddd9&&_0x375bcd&&(_0x542786[_0xaa14c5(0x18e)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22svg/'+_0xbfddd9+_0xaa14c5(0x154)+_0xbfddd9[_0xaa14c5(0x137)]()+_0xaa14c5(0x19f)+_0x375bcd+_0xaa14c5(0x154)+_0x375bcd[_0xaa14c5(0x137)]()+_0xaa14c5(0x120));const _0x3d94c5=currentMode===_0xaa14c5(0x1a1)?_0x164b99+'\x20OTC':_0x164b99;document['getElementById'](_0xaa14c5(0x15d))[_0xaa14c5(0x1cb)]=_0x3d94c5,document[_0xaa14c5(0x1aa)](_0xaa14c5(0x1db))['textContent']=timeframeSelect[_0xaa14c5(0x1d3)];const _0x1231ea=document[_0xaa14c5(0x1aa)](_0xaa14c5(0x141));let _0x5a1d9f=0x0;const _0x4d832c=setInterval(()=>{const _0x520690=_0xaa14c5;_0x5a1d9f+=0x2,_0x5a1d9f>=_0x5ee068&&(_0x5a1d9f=_0x5ee068,clearInterval(_0x4d832c)),_0x1231ea[_0x520690(0x1cb)]=_0x5a1d9f+'%';},0x1e),_0x3ca10f=document[_0xaa14c5(0x1aa)](_0xaa14c5(0x132)),_0xc25d9f=document[_0xaa14c5(0x1aa)]('directionIcon'),_0x274204=translations[currentLanguage];_0x3ca10f['textContent']=_0x1dc2ca?_0x274204['buy']:_0x274204[_0xaa14c5(0x135)],_0x3ca10f[_0xaa14c5(0x189)]=_0xaa14c5(0x123)+(_0x1dc2ca?'up':_0xaa14c5(0x1bd)),_0x3ca10f[_0xaa14c5(0x1c6)]['direction']=_0x1dc2ca?'buy':_0xaa14c5(0x135);_0xc25d9f&&(_0xc25d9f[_0xaa14c5(0x189)]=_0xaa14c5(0x1d5)+(_0x1dc2ca?'up':_0xaa14c5(0x1bd)),_0x1dc2ca?_0xc25d9f['innerHTML']=_0xaa14c5(0x187):_0xc25d9f[_0xaa14c5(0x18e)]=_0xaa14c5(0x1e3));signalInfo['style'][_0xaa14c5(0x194)]=_0xaa14c5(0x190),signalInfo['style'][_0xaa14c5(0x1e6)]='0',signalInfo[_0xaa14c5(0x1a3)]['transform']=_0xaa14c5(0x1ce),setTimeout(()=>{const _0x1559f6=_0xaa14c5;signalInfo['style'][_0x1559f6(0x1cc)]='opacity\x200.5s\x20ease,\x20transform\x200.5s\x20ease',signalInfo[_0x1559f6(0x1a3)][_0x1559f6(0x1e6)]='1',signalInfo['style']['transform']=_0x1559f6(0x118);},0x32);const _0x1f20d0=document[_0xaa14c5(0x1aa)](_0xaa14c5(0x151)),_0x269bfb=document[_0xaa14c5(0x1aa)](_0xaa14c5(0x171));_0x1f20d0[_0xaa14c5(0x1a3)][_0xaa14c5(0x1b1)]='0%';let _0x1790a1=0x0;const _0x1208a7=setInterval(()=>{const _0x1a54dd=_0xaa14c5;_0x1790a1+=0x2,_0x1790a1>0x64&&(_0x1790a1=0x64,clearInterval(_0x1208a7)),_0x1f20d0[_0x1a54dd(0x1a3)][_0x1a54dd(0x1b1)]=_0x1790a1+'%',_0x269bfb[_0x1a54dd(0x1cb)]=_0x1790a1+'%';},0x14);}function updateLanguage(){const _0x84a9bb=_0x22b7a4,_0x5b8b75=translations[currentLanguage];languageFlag&&(languageFlag[_0x84a9bb(0x18c)]=currentLanguage==='en'?'svg/gb.svg':_0x84a9bb(0x16f));const _0x3dfdb1=document['querySelector'](_0x84a9bb(0x183));_0x3dfdb1&&(_0x3dfdb1['textContent']=_0x5b8b75[_0x84a9bb(0x15c)]);getSignalBtn&&!getSignalBtn[_0x84a9bb(0x1e0)]['contains'](_0x84a9bb(0x1e2))&&(getSignalBtn[_0x84a9bb(0x1cb)]=_0x5b8b75[_0x84a9bb(0x11d)]);const _0x2d9547=newPhotoBtn[_0x84a9bb(0x1b9)](_0x84a9bb(0x1df));if(_0x2d9547){let _0x3a7818=_0x2d9547[_0x84a9bb(0x1c3)];while(_0x3a7818&&_0x3a7818['nodeType']===0x3){const _0x299e5e=_0x3a7818;_0x3a7818=_0x3a7818[_0x84a9bb(0x1c3)],_0x299e5e['remove']();}const _0xafd377=document[_0x84a9bb(0x19a)]('\x20'+_0x5b8b75[_0x84a9bb(0x164)]);newPhotoBtn[_0x84a9bb(0x160)](_0xafd377,_0x2d9547[_0x84a9bb(0x1c3)]);}const _0x37da50=document['querySelector'](_0x84a9bb(0x134));_0x37da50&&(_0x37da50['textContent']=_0x5b8b75[_0x84a9bb(0x162)]);const _0x22e9b7=document[_0x84a9bb(0x1b9)]('.calculating-text');_0x22e9b7&&(_0x22e9b7['textContent']=_0x5b8b75[_0x84a9bb(0x146)]);document[_0x84a9bb(0x11a)](_0x84a9bb(0x14d))['forEach'](_0xa03975=>{const _0x48731c=_0x84a9bb,_0x528aac=_0xa03975[_0x48731c(0x128)]('data-i18n');_0x5b8b75[_0x528aac]&&(_0xa03975['textContent']=_0x5b8b75[_0x528aac]);});const _0x1240a5=document['getElementById'](_0x84a9bb(0x132));if(_0x1240a5&&_0x1240a5[_0x84a9bb(0x1c6)][_0x84a9bb(0x1cf)]){const _0x1cb74f=_0x1240a5[_0x84a9bb(0x1c6)][_0x84a9bb(0x1cf)];_0x1240a5[_0x84a9bb(0x1cb)]=_0x1cb74f==='buy'?_0x5b8b75[_0x84a9bb(0x14e)]:_0x5b8b75[_0x84a9bb(0x135)];}updateLanguageModalTitle();}function initLanguage(){const _0x1673c8=_0x22b7a4,_0x30db01=localStorage[_0x1673c8(0x18f)](_0x1673c8(0x1b3));_0x30db01&&(_0x30db01==='en'||_0x30db01==='ru')?currentLanguage=_0x30db01:currentLanguage='en',languageFlag&&(languageFlag['src']=currentLanguage==='en'?_0x1673c8(0x13b):_0x1673c8(0x16f),languageModalList&&languageModalList[_0x1673c8(0x11a)](_0x1673c8(0x11c))[_0x1673c8(0x16d)](_0xa35701=>{const _0x541b7c=_0x1673c8;_0xa35701[_0x541b7c(0x1e0)][_0x541b7c(0x197)](_0x541b7c(0x1e1)),_0xa35701[_0x541b7c(0x1c6)][_0x541b7c(0x161)]===currentLanguage&&_0xa35701[_0x541b7c(0x1e0)][_0x541b7c(0x18d)](_0x541b7c(0x1e1));})),updateLanguage();}function updateLanguageModalTitle(){const _0x7e3a59=_0x22b7a4,_0x5ba9b1=document[_0x7e3a59(0x1b9)](_0x7e3a59(0x1b5));_0x5ba9b1&&(_0x5ba9b1[_0x7e3a59(0x1cb)]=currentLanguage==='en'?_0x7e3a59(0x152):_0x7e3a59(0x1b0));}document[_0x22b7a4(0x119)](_0x22b7a4(0x138),_0x515287=>{});const handleNewPhotoClick=_0x5e813e=>{const _0x14614f=_0x22b7a4;_0x5e813e[_0x14614f(0x12a)](),_0x5e813e[_0x14614f(0x16a)](),newPhotoBtn['classList'][_0x14614f(0x197)](_0x14614f(0x1e2)),newPhotoBtn[_0x14614f(0x178)]=![],resetToPhotoUpload(),setTimeout(()=>{const _0x4d5b31=_0x14614f;newPhotoBtn['blur'](),document['activeElement']&&document[_0x4d5b31(0x170)][_0x4d5b31(0x168)](),document['body']&&(document[_0x4d5b31(0x18a)]['focus'](),document[_0x4d5b31(0x18a)][_0x4d5b31(0x168)]());},0x0);};newPhotoBtn[_0x22b7a4(0x119)](_0x22b7a4(0x19e),_0x224a8e=>_0x224a8e['preventDefault']()),newPhotoBtn[_0x22b7a4(0x119)](_0x22b7a4(0x177),_0x5cfaee=>_0x5cfaee[_0x22b7a4(0x12a)]()),newPhotoBtn[_0x22b7a4(0x119)](_0x22b7a4(0x138),handleNewPhotoClick),newPhotoBtn[_0x22b7a4(0x119)](_0x22b7a4(0x125),_0x360444=>{const _0x395295=_0x22b7a4;_0x360444[_0x395295(0x12a)](),handleNewPhotoClick(_0x360444),newPhotoBtn['blur']();}),newPhotoBtn['addEventListener'](_0x22b7a4(0x1c7),_0x14ecbd=>{const _0x356a82=_0x22b7a4;_0x14ecbd[_0x356a82(0x12a)](),newPhotoBtn['blur']();}),newPhotoBtn[_0x22b7a4(0x119)](_0x22b7a4(0x150),()=>newPhotoBtn[_0x22b7a4(0x168)]()),newPhotoBtn[_0x22b7a4(0x119)](_0x22b7a4(0x191),()=>newPhotoBtn[_0x22b7a4(0x168)]());function resetToPhotoUpload(){const _0x124f00=_0x22b7a4;selectedImage=null,previewImage[_0x124f00(0x18c)]='',previewImage[_0x124f00(0x1a3)][_0x124f00(0x194)]=_0x124f00(0x17d),signalInfo[_0x124f00(0x1a3)]['display']=_0x124f00(0x17d),calculatingIndicators['style'][_0x124f00(0x194)]=_0x124f00(0x17d),calculatingIndicators[_0x124f00(0x1a3)]['opacity']='0',signalPlaceholder['style'][_0x124f00(0x194)]='flex',signalPlaceholder[_0x124f00(0x1a3)][_0x124f00(0x1e6)]='1',signalPlaceholder['style'][_0x124f00(0x11b)]=_0x124f00(0x17e),imageInput[_0x124f00(0x1d3)]='';const _0x1b5fc9=calculatingIndicators[_0x124f00(0x11a)](_0x124f00(0x1c4));_0x1b5fc9[_0x124f00(0x16d)](_0x5052c1=>{const _0x47453c=_0x124f00;_0x5052c1[_0x47453c(0x1e0)]['remove'](_0x47453c(0x136)),_0x5052c1[_0x47453c(0x1e0)][_0x47453c(0x18d)](_0x47453c(0x12c)),_0x5052c1[_0x47453c(0x1cb)]='Вычисляется...';}),newPhotoBtn[_0x124f00(0x1a3)][_0x124f00(0x1e6)]='0',newPhotoBtn[_0x124f00(0x1e0)][_0x124f00(0x197)](_0x124f00(0x1e2)),setTimeout(()=>{const _0x50fe49=_0x124f00;newPhotoBtn[_0x50fe49(0x1a3)][_0x50fe49(0x194)]=_0x50fe49(0x17d),getSignalBtn[_0x50fe49(0x1a3)][_0x50fe49(0x194)]=_0x50fe49(0x190),getSignalBtn['disabled']=!![],getSignalBtn['style'][_0x50fe49(0x1e6)]=_0x50fe49(0x1d0),getSignalBtn[_0x50fe49(0x1a3)][_0x50fe49(0x1bc)]=_0x50fe49(0x1a9),getSignalBtn[_0x50fe49(0x1cb)]=translations[currentLanguage][_0x50fe49(0x11d)],getSignalBtn['style'][_0x50fe49(0x121)]=_0x50fe49(0x1bb),getSignalBtn[_0x50fe49(0x1e0)][_0x50fe49(0x197)]('loading');},0x12c);}initLanguage(),getSignalBtn[_0x22b7a4(0x178)]=!![],getSignalBtn['style'][_0x22b7a4(0x1e6)]='0.5',getSignalBtn[_0x22b7a4(0x1a3)][_0x22b7a4(0x1bc)]=_0x22b7a4(0x1a9),updateTimeframeOptions(),updateCurrencyOptions();const initialOption=currencyDropdown[_0x22b7a4(0x1b9)](_0x22b7a4(0x19d));initialOption&&initialOption[_0x22b7a4(0x1e0)][_0x22b7a4(0x18d)](_0x22b7a4(0x1e1));function updateCustomCurrencyOptions(){const _0x2ba3f2=_0x22b7a4,_0x3c5fd2=currencyDropdown[_0x2ba3f2(0x11a)](_0x2ba3f2(0x133)),_0x172992=currencySelect[_0x2ba3f2(0x1d3)];_0x3c5fd2[_0x2ba3f2(0x16d)](_0x255029=>{const _0x5bde85=_0x2ba3f2,_0x45f948=_0x255029[_0x5bde85(0x1c6)][_0x5bde85(0x1d3)],_0xeac75a=_0x255029[_0x5bde85(0x1b9)](_0x5bde85(0x15f));currentMode===_0x5bde85(0x1a1)?_0xeac75a[_0x5bde85(0x1cb)]=_0x45f948+'\x20OTC':_0xeac75a[_0x5bde85(0x1cb)]=_0x45f948,_0x45f948===_0x172992?_0x255029['classList']['add'](_0x5bde85(0x1e1)):_0x255029[_0x5bde85(0x1e0)][_0x5bde85(0x197)](_0x5bde85(0x1e1));}),currentMode===_0x2ba3f2(0x1a1)?currencyText['textContent']=_0x172992+_0x2ba3f2(0x163):currencyText[_0x2ba3f2(0x1cb)]=_0x172992;}
+// DOM Elements
+const modeButtons = document.querySelectorAll('.mode-btn');
+const currencySelect = document.getElementById('currencySelect');
+const customCurrencySelect = document.getElementById('customCurrencySelect');
+const currencyTrigger = document.getElementById('currencyTrigger');
+const currencyDropdown = document.getElementById('currencyDropdown');
+const currencyText = document.getElementById('currencyText');
+const flag1 = document.getElementById('flag1');
+const flag2 = document.getElementById('flag2');
+const timeframeSelect = document.getElementById('timeframeSelect');
+const customTimeframeSelect = document.getElementById('customTimeframeSelect');
+const timeframeTrigger = document.getElementById('timeframeTrigger');
+const timeframeDropdown = document.getElementById('timeframeDropdown');
+const timeframeText = document.getElementById('timeframeText');
+const signalPlaceholder = document.getElementById('signalPlaceholder');
+const imageInput = document.getElementById('imageInput');
+const previewImage = document.getElementById('previewImage');
+const signalInfo = document.getElementById('signalInfo');
+const calculatingIndicators = document.getElementById('calculatingIndicators');
+const getSignalBtn = document.getElementById('getSignalBtn');
+const customLanguageSelect = document.getElementById('customLanguageSelect');
+const languageTrigger = document.getElementById('languageTrigger');
+const languageModal = document.getElementById('languageModal');
+const languageModalClose = document.getElementById('languageModalClose');
+const languageModalList = document.getElementById('languageModalList');
+const languageFlag = document.getElementById('languageFlag');
+const newPhotoBtn = document.getElementById('newPhotoBtn');
+
+// State
+let selectedImage = null;
+let currentMode = 'otc';
+let currentLanguage = 'en'; // 'en' or 'ru'
+
+// Telegram WebApp initialization
+function initTelegramWebApp() {
+    if (window.Telegram && window.Telegram.WebApp) {
+        const tg = window.Telegram.WebApp;
+        
+        // Уведомляем Telegram о готовности приложения
+        tg.ready();
+        
+        // Растягиваем окно на всю доступную высоту
+        tg.expand();
+        
+        // Запрашиваем полноэкранный режим
+        tg.requestFullscreen();
+        
+        // Дополнительные настройки для лучшего отображения
+        tg.enableClosingConfirmation();
+        
+        // Функция для установки отступа с учетом safe area (iPhone notch/Dynamic Island) + дополнительно 20px
+        const applySafeAreaInset = () => {
+            const header = document.querySelector('.header');
+            if (!header) return;
+
+            let topInset = 0;
+
+            // Проверяем различные варианты API Telegram WebApp
+            // Вариант 1: Прямое свойство safeAreaInsets
+            if (tg.safeAreaInsets && typeof tg.safeAreaInsets === 'object') {
+                topInset = tg.safeAreaInsets.top || 0;
+            }
+            // Вариант 2: Через viewport (если доступно)
+            else if (tg.viewport && tg.viewport.safeAreaInsets) {
+                const insets = typeof tg.viewport.safeAreaInsets === 'function' 
+                    ? tg.viewport.safeAreaInsets() 
+                    : tg.viewport.safeAreaInsets;
+                topInset = (insets && typeof insets.top === 'number') ? insets.top : 0;
+            }
+            // Вариант 3: Определяем iOS и применяем фиксированный отступ для iPhone
+            else if (tg.platform === 'ios' || /iPhone|iPad|iPod/.test(navigator.userAgent)) {
+                // Для iPhone с notch/Dynamic Island используем примерный отступ
+                const isIPhoneX = window.screen.height >= 812 || window.screen.width >= 812;
+                topInset = isIPhoneX ? 44 : 20; // 44px для iPhone X и новее, 20px для старых
+            }
+
+            const additionalPadding = 20;
+            header.style.paddingTop = `${topInset + additionalPadding}px`;
+        };
+
+        // Применяем сразу после инициализации
+        applySafeAreaInset();
+
+        // Повторно применяем через небольшую задержку (на случай, если данные еще не готовы)
+        setTimeout(applySafeAreaInset, 100);
+        setTimeout(applySafeAreaInset, 500);
+
+        // Обновляем при изменении viewport (ориентация, появление/скрытие системных элементов и т.д.)
+        if (tg.onEvent) {
+            tg.onEvent('viewportChanged', applySafeAreaInset);
+        }
+        
+        // Также слушаем изменения размера окна
+        window.addEventListener('resize', applySafeAreaInset);
+        window.addEventListener('orientationchange', () => {
+            setTimeout(applySafeAreaInset, 100);
+        });
+    }
+}
+
+// Инициализируем при загрузке страницы
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTelegramWebApp);
+} else {
+    // Если страница уже загружена, пробуем сразу
+    initTelegramWebApp();
+    // Также пробуем через небольшую задержку на случай, если скрипт Telegram еще загружается
+    setTimeout(initTelegramWebApp, 100);
+}
+
+// Translations
+const translations = {
+    en: {
+        selectLanguage: 'Select Language',
+        placeholderText: 'Click to take a photo or select an image',
+        getSignal: 'GET SIGNAL',
+        analyzing: 'ANALYZING...',
+        loadMorePhotos: 'Load more photos',
+        calculatingIndicators: 'Calculating indicators',
+        analyzingIndicators: 'Analyzing technical indicators...',
+        calculating: 'Calculating...',
+        ready: 'Ready ✓',
+        sign: 'SIGNAL',
+        currencyPair: 'Currency Pair',
+        timeframe: 'Timeframe',
+        accuracy: 'Accuracy',
+        direction: 'Direction',
+        signalFound: 'Signal found',
+        buy: 'BUY',
+        sell: 'SELL'
+    },
+    ru: {
+        selectLanguage: 'Выбрать язык',
+        placeholderText: 'Нажмите, чтобы сделать фото или выбрать изображение',
+        getSignal: 'ПОЛУЧИТЬ СИГНАЛ',
+        analyzing: 'АНАЛИЗИРУЮ...',
+        loadMorePhotos: 'Загрузить еще фото',
+        calculatingIndicators: 'Вычисление индикаторов',
+        analyzingIndicators: 'Анализ технических индикаторов...',
+        calculating: 'Вычисляется...',
+        ready: 'Готово ✓',
+        sign: 'СИГНАЛ',
+        currencyPair: 'Валютная пара',
+        timeframe: 'Таймфрейм',
+        accuracy: 'Точность',
+        direction: 'Направление',
+        signalFound: 'Сигнал найден',
+        buy: 'ПОКУПКА',
+        sell: 'ПРОДАЖА'
+    }
+};
+
+// Timeframe options
+const timeframeOptions = {
+    forex: [
+        { value: '1m', label: '1M' },
+        { value: '3m', label: '3M' },
+        { value: '5m', label: '5M' },
+        { value: '15m', label: '15M' },
+        { value: '30m', label: '30M' }
+    ],
+    otc: [
+        { value: '5s', label: '5S' },
+        { value: '15s', label: '15S' },
+        { value: '30s', label: '30S' },
+        { value: '1m', label: '1M' },
+        { value: '5m', label: '5M' },
+        { value: '15m', label: '15M' }
+    ]
+};
+
+// Mode Selection
+modeButtons.forEach(btn => {
+    const handleClick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        modeButtons.forEach(b => {
+            b.classList.remove('active');
+            b.style.transform = 'scale(1)';
+        });
+        btn.classList.add('active');
+        btn.style.transform = 'scale(1.05)';
+        setTimeout(() => {
+            btn.style.transform = 'scale(1.02)';
+        }, 200);
+        currentMode = btn.dataset.mode;
+        updateCurrencyOptions();
+        updateCustomCurrencyOptions();
+        updateTimeframeOptions();
+        
+        // Force blur immediately
+        setTimeout(() => {
+            btn.blur();
+            if (document.activeElement) {
+                document.activeElement.blur();
+            }
+            // Force remove focus from body
+            if (document.body) {
+                document.body.focus();
+                document.body.blur();
+            }
+        }, 0);
+    };
+    
+    btn.addEventListener('mousedown', (e) => e.preventDefault());
+    btn.addEventListener('touchstart', (e) => e.preventDefault());
+    btn.addEventListener('click', handleClick);
+    btn.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        handleClick(e);
+        btn.blur();
+    });
+    btn.addEventListener('mouseup', (e) => {
+        e.preventDefault();
+        btn.blur();
+    });
+    btn.addEventListener('mouseleave', () => btn.blur());
+    btn.addEventListener('touchcancel', () => btn.blur());
+});
+
+// Update currency options based on mode
+function updateCurrencyOptions() {
+    const options = currencySelect.querySelectorAll('option');
+    const selectedValue = currencySelect.value;
+    
+    options.forEach(option => {
+        const pair = option.value;
+        // For Forex: just the pair name, for OTC: pair name + " OTC"
+        if (currentMode === 'otc') {
+            option.textContent = `${pair} OTC`;
+        } else {
+            option.textContent = pair;
+        }
+    });
+    
+    currencySelect.value = selectedValue;
+}
+
+// Update timeframe options based on mode
+function updateTimeframeOptions() {
+    const options = timeframeOptions[currentMode];
+    const currentValue = timeframeSelect.value;
+    
+    // Update hidden select
+    timeframeSelect.innerHTML = '';
+    options.forEach(option => {
+        const optionElement = document.createElement('option');
+        optionElement.value = option.value;
+        optionElement.textContent = option.label;
+        timeframeSelect.appendChild(optionElement);
+    });
+    
+    // Try to set previous value if it exists in new options
+    let selectedValue = options[0].value;
+    if (options.find(opt => opt.value === currentValue)) {
+        selectedValue = currentValue;
+    }
+    timeframeSelect.value = selectedValue;
+    
+    // Update custom dropdown
+    timeframeDropdown.innerHTML = '';
+    options.forEach(option => {
+        const optionDiv = document.createElement('div');
+        optionDiv.className = 'custom-option';
+        optionDiv.dataset.value = option.value;
+        optionDiv.innerHTML = `<span class="timeframe-text">${option.label}</span>`;
+        
+        if (option.value === selectedValue) {
+            optionDiv.classList.add('selected');
+        }
+        
+        optionDiv.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const value = optionDiv.dataset.value;
+            
+            // Update hidden select
+            timeframeSelect.value = value;
+            
+            // Update trigger display
+            timeframeText.textContent = option.label;
+            
+            // Update selected state
+            timeframeDropdown.querySelectorAll('.custom-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            optionDiv.classList.add('selected');
+            
+            // Close dropdown
+            timeframeTrigger.classList.remove('active');
+            timeframeDropdown.classList.remove('open');
+            
+            // Trigger change event
+            timeframeSelect.dispatchEvent(new Event('change'));
+            
+            // Remove focus
+            setTimeout(() => {
+                removeAllFocus();
+            }, 100);
+        });
+        
+        timeframeDropdown.appendChild(optionDiv);
+    });
+    
+    // Update trigger text
+    const selectedOption = options.find(opt => opt.value === selectedValue);
+    if (selectedOption) {
+        timeframeText.textContent = selectedOption.label;
+    }
+}
+
+// Custom Currency Selector functionality
+currencyTrigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Close other dropdowns if open
+    timeframeTrigger.classList.remove('active');
+    timeframeDropdown.classList.remove('open');
+    if (languageModal) {
+        languageModal.classList.remove('active');
+    }
+    // Toggle currency dropdown
+    currencyTrigger.classList.toggle('active');
+    currencyDropdown.classList.toggle('open');
+});
+
+// Custom Timeframe Selector functionality
+timeframeTrigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Close other dropdowns if open
+    currencyTrigger.classList.remove('active');
+    currencyDropdown.classList.remove('open');
+    if (languageModal) {
+        languageModal.classList.remove('active');
+    }
+    // Toggle timeframe dropdown
+    timeframeTrigger.classList.toggle('active');
+    timeframeDropdown.classList.toggle('open');
+});
+
+// Custom Language Selector functionality - Open Modal
+languageTrigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Close other dropdowns if open
+    currencyTrigger.classList.remove('active');
+    currencyDropdown.classList.remove('open');
+    timeframeTrigger.classList.remove('active');
+    timeframeDropdown.classList.remove('open');
+    // Open language modal
+    languageModal.classList.add('active');
+    updateLanguageModalTitle();
+});
+
+// Close modal button
+languageModalClose.addEventListener('click', (e) => {
+    e.stopPropagation();
+    languageModal.classList.remove('active');
+    setTimeout(() => {
+        removeAllFocus();
+    }, 100);
+});
+
+// Close modal when clicking outside
+languageModal.addEventListener('click', (e) => {
+    if (e.target === languageModal) {
+        languageModal.classList.remove('active');
+        setTimeout(() => {
+            removeAllFocus();
+        }, 100);
+    }
+});
+
+// Handle language option selection
+languageModalList.querySelectorAll('.language-modal-option').forEach(option => {
+    option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const lang = option.dataset.lang;
+        const flag = option.dataset.flag;
+        
+        if (lang && lang !== currentLanguage) {
+            // Update language
+            currentLanguage = lang;
+            
+            // Save to localStorage
+            localStorage.setItem('language', currentLanguage);
+            
+            // Update trigger display
+            languageFlag.src = `svg/${flag}.svg`;
+            
+            // Update selected state
+            languageModalList.querySelectorAll('.language-modal-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            option.classList.add('selected');
+            
+            // Close modal
+            languageModal.classList.remove('active');
+            
+            // Update all text
+            updateLanguage();
+        } else {
+            // Just close modal if same language selected
+            languageModal.classList.remove('active');
+        }
+        
+        // Remove focus
+        setTimeout(() => {
+            removeAllFocus();
+        }, 100);
+    });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+    if (!customCurrencySelect.contains(e.target)) {
+        currencyTrigger.classList.remove('active');
+        currencyDropdown.classList.remove('open');
+    }
+    if (!customTimeframeSelect.contains(e.target)) {
+        timeframeTrigger.classList.remove('active');
+        timeframeDropdown.classList.remove('open');
+    }
+});
+
+// Handle option selection
+currencyDropdown.querySelectorAll('.custom-option').forEach(option => {
+    option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const value = option.dataset.value;
+        const flag1Value = option.dataset.flag1;
+        const flag2Value = option.dataset.flag2;
+        
+        // Update hidden select
+        currencySelect.value = value;
+        
+        // Update trigger display
+        if (currentMode === 'otc') {
+            currencyText.textContent = `${value} OTC`;
+        } else {
+            currencyText.textContent = value;
+        }
+        
+        // Update flags
+        if (flag1 && flag2 && flag1Value && flag2Value) {
+            flag1.src = `svg/${flag1Value}.svg`;
+            flag2.src = `svg/${flag2Value}.svg`;
+        }
+        
+        // Update selected state
+        currencyDropdown.querySelectorAll('.custom-option').forEach(opt => {
+            opt.classList.remove('selected');
+        });
+        option.classList.add('selected');
+        
+        // Close dropdown
+        currencyTrigger.classList.remove('active');
+        currencyDropdown.classList.remove('open');
+        
+        // Trigger change event
+        currencySelect.dispatchEvent(new Event('change'));
+        
+        // Remove focus
+        setTimeout(() => {
+            removeAllFocus();
+        }, 100);
+    });
+});
+
+// Update currency select when mode changes
+currencySelect.addEventListener('change', () => {
+    updateCurrencyOptions();
+    updateCustomCurrencyOptions();
+});
+
+timeframeSelect.addEventListener('change', () => {
+    // Remove focus styles immediately
+    timeframeSelect.style.outline = 'none';
+    timeframeSelect.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+    timeframeSelect.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.2)';
+    // Blur after selection is made
+    setTimeout(() => {
+        timeframeSelect.blur();
+        removeAllFocus();
+    }, 100);
+});
+
+// Function to remove focus from all elements
+function removeAllFocus() {
+    if (document.activeElement && document.activeElement !== document.body) {
+        document.activeElement.blur();
+    }
+    if (document.body) {
+        document.body.focus();
+        document.body.blur();
+    }
+}
+
+// Remove focus when clicking/touching anywhere on the page
+document.addEventListener('touchstart', (e) => {
+    // Don't blur if clicking on a select that's opening
+    if (e.target === currencySelect || e.target === timeframeSelect) {
+        return;
+    }
+    // Remove focus from other elements when touching something new
+    if (document.activeElement && 
+        document.activeElement !== e.target && 
+        document.activeElement !== currencySelect && 
+        document.activeElement !== timeframeSelect) {
+        document.activeElement.blur();
+    }
+}, true);
+
+document.addEventListener('touchend', (e) => {
+    // If not clicking on an interactive element, remove all focus
+    const interactiveElements = [
+        currencySelect, 
+        timeframeSelect, 
+        getSignalBtn, 
+        newPhotoBtn, 
+        customLanguageSelect,
+        signalPlaceholder,
+        ...modeButtons
+    ];
+    
+    if (!interactiveElements.includes(e.target) && 
+        !interactiveElements.some(el => el.contains(e.target))) {
+        setTimeout(() => {
+            removeAllFocus();
+        }, 100);
+    }
+}, true);
+
+// Also handle mouse clicks for desktop
+document.addEventListener('mousedown', (e) => {
+    if (e.target === currencySelect || e.target === timeframeSelect) {
+        return;
+    }
+    // Remove focus styles from selects
+    if (document.activeElement === currencySelect || document.activeElement === timeframeSelect) {
+        const activeSelect = document.activeElement;
+        activeSelect.style.outline = 'none';
+        activeSelect.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        activeSelect.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.2)';
+    }
+    if (document.activeElement && 
+        document.activeElement !== e.target && 
+        document.activeElement !== currencySelect && 
+        document.activeElement !== timeframeSelect) {
+        document.activeElement.blur();
+    }
+}, true);
+
+// Image Upload/Capture
+const handlePlaceholderClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    imageInput.click();
+    setTimeout(() => {
+        signalPlaceholder.blur();
+        if (document.activeElement) {
+            document.activeElement.blur();
+        }
+        if (document.body) {
+            document.body.focus();
+            document.body.blur();
+        }
+    }, 0);
+};
+
+signalPlaceholder.addEventListener('mousedown', (e) => e.preventDefault());
+signalPlaceholder.addEventListener('touchstart', (e) => e.preventDefault());
+signalPlaceholder.addEventListener('click', handlePlaceholderClick);
+signalPlaceholder.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    handlePlaceholderClick(e);
+    signalPlaceholder.blur();
+});
+signalPlaceholder.addEventListener('mouseup', (e) => {
+    e.preventDefault();
+    signalPlaceholder.blur();
+});
+signalPlaceholder.addEventListener('mouseleave', () => signalPlaceholder.blur());
+signalPlaceholder.addEventListener('touchcancel', () => signalPlaceholder.blur());
+
+imageInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            selectedImage = event.target.result;
+            previewImage.src = selectedImage;
+            
+            // Smooth fade out placeholder
+            signalPlaceholder.style.opacity = '0';
+            signalPlaceholder.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                signalPlaceholder.style.display = 'none';
+                previewImage.style.display = 'block';
+                previewImage.style.opacity = '0';
+                signalInfo.style.display = 'none';
+                
+                // Smooth fade in image
+                setTimeout(() => {
+                    previewImage.style.transition = 'opacity 0.5s ease';
+                    previewImage.style.opacity = '1';
+                }, 50);
+            }, 300);
+            
+            getSignalBtn.disabled = false;
+            getSignalBtn.style.opacity = '1';
+            getSignalBtn.style.cursor = 'pointer';
+            getSignalBtn.style.transform = 'scale(1)';
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+// Get Signal Button
+const handleGetSignalClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!selectedImage) {
+        // Smooth animation when no photo
+        getSignalBtn.style.transition = 'all 0.3s ease';
+        getSignalBtn.style.transform = 'scale(0.95)';
+        getSignalBtn.style.opacity = '0.7';
+        
+        setTimeout(() => {
+            getSignalBtn.style.transform = 'scale(1)';
+            getSignalBtn.style.opacity = '1';
+        }, 150);
+        
+        setTimeout(() => {
+            getSignalBtn.style.transition = '';
+            getSignalBtn.blur();
+            if (document.activeElement) {
+                document.activeElement.blur();
+            }
+            if (document.body) {
+                document.body.focus();
+                document.body.blur();
+            }
+        }, 300);
+        return;
+    }
+
+    // Hide preview image with animation
+    previewImage.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    previewImage.style.opacity = '0';
+    previewImage.style.transform = 'scale(0.95)';
+    
+    // Disable button during analysis
+    getSignalBtn.disabled = true;
+    getSignalBtn.classList.add('loading');
+    getSignalBtn.textContent = translations[currentLanguage].analyzing;
+    getSignalBtn.style.background = 'linear-gradient(135deg, #ffa500 0%, #ffa500 100%)';
+    
+    // Hide signal placeholder and signal info if visible
+    signalPlaceholder.style.display = 'none';
+    signalInfo.style.display = 'none';
+    
+    // Show calculating indicators immediately
+    setTimeout(() => {
+        previewImage.style.display = 'none';
+        calculatingIndicators.style.display = 'flex';
+        calculatingIndicators.style.opacity = '0';
+        setTimeout(() => {
+            calculatingIndicators.style.transition = 'opacity 0.5s ease';
+            calculatingIndicators.style.opacity = '1';
+        }, 50);
+        
+        // Animate indicators calculation
+        animateIndicatorsCalculation();
+    }, 300);
+    
+    // After indicators calculation, show signal
+    setTimeout(() => {
+        calculatingIndicators.style.opacity = '0';
+        setTimeout(() => {
+            calculatingIndicators.style.display = 'none';
+            analyzeSignal();
+            
+            // Hide GET SIGNAL button and show NEW PHOTO button
+            getSignalBtn.classList.remove('loading');
+            getSignalBtn.style.display = 'none';
+            newPhotoBtn.style.display = 'flex';
+            newPhotoBtn.style.opacity = '0';
+            newPhotoBtn.disabled = false;
+            newPhotoBtn.classList.remove('loading');
+            setTimeout(() => {
+                newPhotoBtn.style.transition = 'opacity 0.5s ease';
+                newPhotoBtn.style.opacity = '1';
+            }, 100);
+            setTimeout(() => {
+                getSignalBtn.blur();
+                if (document.activeElement) {
+                    document.activeElement.blur();
+                }
+                if (document.body) {
+                    document.body.focus();
+                    document.body.blur();
+                }
+            }, 0);
+        }, 500);
+    }, 2800); // 300ms (hide image) + 2500ms (indicators calculation)
+};
+
+getSignalBtn.addEventListener('mousedown', (e) => e.preventDefault());
+getSignalBtn.addEventListener('touchstart', (e) => e.preventDefault());
+getSignalBtn.addEventListener('click', handleGetSignalClick);
+getSignalBtn.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    handleGetSignalClick(e);
+    getSignalBtn.blur();
+});
+getSignalBtn.addEventListener('mouseup', (e) => {
+    e.preventDefault();
+    getSignalBtn.blur();
+});
+getSignalBtn.addEventListener('mouseleave', () => getSignalBtn.blur());
+getSignalBtn.addEventListener('touchcancel', () => getSignalBtn.blur());
+
+getSignalBtn.addEventListener('mouseleave', () => {
+    getSignalBtn.blur();
+});
+
+// Animate indicators calculation
+function animateIndicatorsCalculation() {
+    const indicators = calculatingIndicators.querySelectorAll('.indicator-item');
+    const delay = 400; // Delay between each indicator
+    
+    // Reset all indicators to calculating state first
+    indicators.forEach((indicator) => {
+        const status = indicator.querySelector('.indicator-status');
+        status.classList.remove('completed');
+        status.classList.add('calculating');
+        status.textContent = translations[currentLanguage].calculating;
+    });
+    
+    // Then animate them to completed state
+    indicators.forEach((indicator, index) => {
+        setTimeout(() => {
+            const status = indicator.querySelector('.indicator-status');
+            status.classList.remove('calculating');
+            status.classList.add('completed');
+            status.textContent = translations[currentLanguage].ready;
+        }, delay * (index + 1));
+    });
+}
+
+// Fake Signal Analysis
+function analyzeSignal() {
+    // Generate fake prediction
+    const directions = ['BUY', 'SELL'];
+    const randomDirection = directions[Math.floor(Math.random() * directions.length)];
+    const isUp = randomDirection === 'BUY';
+    const accuracy = Math.floor(Math.random() * 3) + 97;
+    
+    // Get selected currency pair info
+    const selectedOption = currencySelect.options[currencySelect.selectedIndex];
+    const pairValue = selectedOption.value;
+    const flag1Value = selectedOption.dataset.flag1;
+    const flag2Value = selectedOption.dataset.flag2;
+    
+    // Update currency pair flags
+    const signalCurrencyFlags = document.getElementById('signalCurrencyFlags');
+    if (signalCurrencyFlags && flag1Value && flag2Value) {
+        signalCurrencyFlags.innerHTML = `
+            <img src="svg/${flag1Value}.svg" alt="${flag1Value.toUpperCase()}" class="flag-icon">
+            <img src="svg/${flag2Value}.svg" alt="${flag2Value.toUpperCase()}" class="flag-icon">
+        `;
+    }
+    
+    // Update currency pair text
+    const pairText = currentMode === 'otc' ? `${pairValue} OTC` : pairValue;
+    document.getElementById('detailPair').textContent = pairText;
+    
+    // Update timeframe
+    document.getElementById('detailTimeframe').textContent = timeframeSelect.value;
+    
+    // Animate accuracy counter
+    const accuracyElement = document.getElementById('detailAccuracy');
+    let currentAccuracy = 0;
+    const accuracyInterval = setInterval(() => {
+        currentAccuracy += 2;
+        if (currentAccuracy >= accuracy) {
+            currentAccuracy = accuracy;
+            clearInterval(accuracyInterval);
+        }
+        accuracyElement.textContent = currentAccuracy + '%';
+    }, 30);
+    
+    // Update direction
+    const directionElement = document.getElementById('detailDirection');
+    const directionIcon = document.getElementById('directionIcon');
+    const t = translations[currentLanguage];
+    directionElement.textContent = isUp ? t.buy : t.sell;
+    directionElement.className = 'direction-text ' + (isUp ? 'up' : 'down');
+    // Store direction type for language updates
+    directionElement.dataset.direction = isUp ? 'buy' : 'sell';
+    
+    // Update direction icon
+    if (directionIcon) {
+        directionIcon.className = 'direction-icon ' + (isUp ? 'up' : 'down');
+        if (isUp) {
+            directionIcon.innerHTML = `
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L12 12L17 17M7 11L12 6L17 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            `;
+        } else {
+            directionIcon.innerHTML = `
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            `;
+        }
+    }
+    
+    // Show signal info with animation
+    signalInfo.style.display = 'block';
+    signalInfo.style.opacity = '0';
+    signalInfo.style.transform = 'translateY(20px) scale(0.95)';
+    
+    setTimeout(() => {
+        signalInfo.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        signalInfo.style.opacity = '1';
+        signalInfo.style.transform = 'translateY(0) scale(1)';
+    }, 50);
+    
+    // Animate progress bar
+    const progressFill = document.getElementById('progressFill');
+    const progressPercent = document.getElementById('progressPercent');
+    progressFill.style.width = '0%';
+    
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+        progress += 2;
+        if (progress > 100) {
+            progress = 100;
+            clearInterval(progressInterval);
+        }
+        progressFill.style.width = progress + '%';
+        progressPercent.textContent = progress + '%';
+    }, 20);
+}
+
+// Update all text content based on current language
+function updateLanguage() {
+    const t = translations[currentLanguage];
+    
+    // Language selector - update trigger display
+    if (languageFlag) {
+        languageFlag.src = currentLanguage === 'en' ? 'svg/gb.svg' : 'svg/ru.svg';
+    }
+    
+    // Placeholder text
+    const placeholderText = document.querySelector('.placeholder-text');
+    if (placeholderText) {
+        placeholderText.textContent = t.placeholderText;
+    }
+    
+    // Get Signal button
+    if (getSignalBtn && !getSignalBtn.classList.contains('loading')) {
+        getSignalBtn.textContent = t.getSignal;
+    }
+    
+    // New Photo button
+    const newPhotoBtnSvg = newPhotoBtn.querySelector('svg');
+    if (newPhotoBtnSvg) {
+        // Find and update text node after SVG
+        let textNode = newPhotoBtnSvg.nextSibling;
+        // Remove all text nodes after SVG
+        while (textNode && textNode.nodeType === 3) {
+            const toRemove = textNode;
+            textNode = textNode.nextSibling;
+            toRemove.remove();
+        }
+        // Add new text node
+        const newTextNode = document.createTextNode(' ' + t.loadMorePhotos);
+        newPhotoBtn.insertBefore(newTextNode, newPhotoBtnSvg.nextSibling);
+    }
+    
+    // Calculating indicators
+    const calculatingTitle = document.querySelector('.calculating-title');
+    if (calculatingTitle) {
+        calculatingTitle.textContent = t.calculatingIndicators;
+    }
+    
+    const calculatingText = document.querySelector('.calculating-text');
+    if (calculatingText) {
+        calculatingText.textContent = t.analyzingIndicators;
+    }
+    
+    // Signal info labels - update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (t[key]) {
+            element.textContent = t[key];
+        }
+    });
+    
+    // Update direction text if signal was already generated
+    const directionElement = document.getElementById('detailDirection');
+    if (directionElement && directionElement.dataset.direction) {
+        const directionType = directionElement.dataset.direction;
+        directionElement.textContent = directionType === 'buy' ? t.buy : t.sell;
+    }
+    
+    // Update modal title if modal is open
+    updateLanguageModalTitle();
+}
+
+// Custom Language Selector functionality (already defined above)
+
+// Load language from localStorage on page load
+function initLanguage() {
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'ru')) {
+        currentLanguage = savedLanguage;
+    } else {
+        currentLanguage = 'en'; // Default to English
+    }
+    
+    // Update language selector display
+    if (languageFlag) {
+        languageFlag.src = currentLanguage === 'en' ? 'svg/gb.svg' : 'svg/ru.svg';
+        
+        // Update selected state in modal
+        if (languageModalList) {
+            languageModalList.querySelectorAll('.language-modal-option').forEach(opt => {
+                opt.classList.remove('selected');
+                if (opt.dataset.lang === currentLanguage) {
+                    opt.classList.add('selected');
+                }
+            });
+        }
+    }
+    
+    // Update all text content after language is loaded
+    updateLanguage();
+}
+
+// Update language modal title
+function updateLanguageModalTitle() {
+    const title = document.querySelector('.language-modal-title');
+    if (title) {
+        title.textContent = currentLanguage === 'en' ? 'Select the language' : 'Выберите язык';
+    }
+}
+
+// Close language dropdown when clicking outside
+document.addEventListener('click', (e) => {
+});
+
+// New Photo Button
+const handleNewPhotoClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    // Remove loading state immediately
+    newPhotoBtn.classList.remove('loading');
+    newPhotoBtn.disabled = false;
+    resetToPhotoUpload();
+    setTimeout(() => {
+        newPhotoBtn.blur();
+        if (document.activeElement) {
+            document.activeElement.blur();
+        }
+        if (document.body) {
+            document.body.focus();
+            document.body.blur();
+        }
+    }, 0);
+};
+
+newPhotoBtn.addEventListener('mousedown', (e) => e.preventDefault());
+newPhotoBtn.addEventListener('touchstart', (e) => e.preventDefault());
+newPhotoBtn.addEventListener('click', handleNewPhotoClick);
+newPhotoBtn.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    handleNewPhotoClick(e);
+    newPhotoBtn.blur();
+});
+newPhotoBtn.addEventListener('mouseup', (e) => {
+    e.preventDefault();
+    newPhotoBtn.blur();
+});
+newPhotoBtn.addEventListener('mouseleave', () => newPhotoBtn.blur());
+newPhotoBtn.addEventListener('touchcancel', () => newPhotoBtn.blur());
+
+// Reset to photo upload state
+function resetToPhotoUpload() {
+    selectedImage = null;
+    previewImage.src = '';
+    previewImage.style.display = 'none';
+    signalInfo.style.display = 'none';
+    calculatingIndicators.style.display = 'none';
+    calculatingIndicators.style.opacity = '0';
+    signalPlaceholder.style.display = 'flex';
+    signalPlaceholder.style.opacity = '1';
+    signalPlaceholder.style.transform = 'scale(1)';
+    imageInput.value = '';
+    
+    // Reset indicators status
+    const indicators = calculatingIndicators.querySelectorAll('.indicator-status');
+    indicators.forEach(status => {
+        status.classList.remove('completed');
+        status.classList.add('calculating');
+        status.textContent = 'Вычисляется...';
+    });
+    
+    // Hide new photo button and show GET SIGNAL button
+    newPhotoBtn.style.opacity = '0';
+    newPhotoBtn.classList.remove('loading');
+    setTimeout(() => {
+        newPhotoBtn.style.display = 'none';
+        getSignalBtn.style.display = 'block';
+        getSignalBtn.disabled = true;
+        getSignalBtn.style.opacity = '0.5';
+        getSignalBtn.style.cursor = 'not-allowed';
+        getSignalBtn.textContent = translations[currentLanguage].getSignal;
+        getSignalBtn.style.background = 'linear-gradient(135deg, #ffa500 0%, #ffd700 100%)';
+        getSignalBtn.classList.remove('loading');
+    }, 300);
+}
+
+// Initialize language on page load
+initLanguage();
+
+// Initialize
+getSignalBtn.disabled = true;
+getSignalBtn.style.opacity = '0.5';
+getSignalBtn.style.cursor = 'not-allowed';
+
+// Initialize timeframes and currency select
+updateTimeframeOptions();
+updateCurrencyOptions();
+
+// Set initial selected option in custom dropdown
+const initialOption = currencyDropdown.querySelector('.custom-option[data-value="EURUSD"]');
+if (initialOption) {
+    initialOption.classList.add('selected');
+}
+
+// Update all custom options when mode changes
+function updateCustomCurrencyOptions() {
+    const customOptions = currencyDropdown.querySelectorAll('.custom-option');
+    const selectedValue = currencySelect.value;
+    
+    customOptions.forEach(option => {
+        const optionValue = option.dataset.value;
+        const optionText = option.querySelector('.currency-text');
+        
+        if (currentMode === 'otc') {
+            optionText.textContent = `${optionValue} OTC`;
+        } else {
+            optionText.textContent = optionValue;
+        }
+        
+        // Update selected state
+        if (optionValue === selectedValue) {
+            option.classList.add('selected');
+        } else {
+            option.classList.remove('selected');
+        }
+    });
+    
+    // Update trigger text
+    if (currentMode === 'otc') {
+        currencyText.textContent = `${selectedValue} OTC`;
+    } else {
+        currencyText.textContent = selectedValue;
+    }
+}
+
